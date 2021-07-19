@@ -1,0 +1,18 @@
+Project name: lawyer-site
+Apps: 1. Home, 2. Prices, 3. Contacts
+
+Realize all wishes about frontend. Backend is on yours.
+
+At Home should realize a lot of staff, like base of the frontend and working links.
+At prices make a boxes with cost and do with orderer
+At contact use photos, bio and a lot of text, that's can describe WHY YOU NEED THIS SERVICES, also at future make
+reviews about work and etc.
+
+
+Header  черный
+Карусель для отзывов
+Cover or Pricing
+
+OR
+
+PRODUCT
