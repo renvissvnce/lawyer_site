@@ -1,0 +1,40 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+Услуги
+{% endblock %}
+
+{% block body %}
+{% load static %}
+<style>
+   .leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+   }
+   .rightimg  {
+    float: right; /* Выравнивание по правому краю  */
+    margin: 7px 0 7px 100px; /* Отступы вокруг картинки */
+   }
+  </style>
+
+<div class="container">
+    <br>
+    <ul class="container" align="justify">
+        <h1 class='text-center'>Контактные данные адвоката</h1>
+        <li><h3>Конактный телефон адвоката: Телефон:+38-068-786-46-56; (сделаем вызов прямо с сайта, для телефонов)</h3></li>
+        <li><h3>Электронная почта:mega-bekker777@ukr.net;</h3></li>
+        <li><h3>Юридический адрес: г. Мариуполь, бул. Б.Хмельницкого, 6.</h3></li>
+        <h1 class='text-center'>График работы адвоката</h1>
+        <li><h3>Понедельник-пятница с 10:00-20:00.</h3></li>
+        <li><h3>Выходные (суббота-воскресенье) и праздничные дни по записи</h3></li>
+        <li><h3>Стоимость оказания услуг в выходные и праздничные дни повышенная.</h3></li>
+        <h1 class='text-center'>Как пройти до указанного адреса</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1358.2607812397332!2d37.52566480819222!3d47.08884514478842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m3!3m2!1d47.0891871!2d37.5262269!4m5!1s0x40e6e485f1ec87fd%3A0xee318655846b68be!2z0L_Quy4g0JLQvtC40L3QvtCyLdC-0YHQstC-0LHQvtC00LjRgtC10LvQtdC5LCDQnNCw0YDQuNGD0L_QvtC70YwsINCU0L7QvdC10YbQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCwLCA4NzUwMA!3m2!1d47.088684!2d37.527454!5e0!3m2!1sru!2sru!4v1627367429102!5m2!1sru!2sru" class="rightimg" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <li>Здесь должны быть номера автобусов, маршруток.</li>
+        <li>Как пройти к зданию, какой код от домофона (но, я, как понял, клиентам надо звонить по прибытию, лучше это здесь написать)</li>
+        <li>Ниже наверное сделаем формочку, для отправки заявок на сервер, это не проблема, сделаем. Расскажу что да как работает<img src="{% static 'home/img/example.png' %}" alt="Example-1" width="1280" height="1024" class="lefttimg"></li>
+
+    </ul>
+
+</div>
+{% endblock %}

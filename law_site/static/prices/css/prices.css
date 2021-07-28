@@ -1,0 +1,16 @@
+.left-col, /* левая колонка */
+.right-col/* правая колонка */
+{
+    width: 50%;    /* ширина */
+    min-width: 180px;  /* минимальная ширина сужения */
+    height: auto;  /* высота */
+    box-sizing: border-box;
+    float: left; /* плавающие блоки */
+}
+.left-col{
+    padding-right: 10px; /* отступ справа */
+}
+.right-col{
+    padding-left: 10px; /* отступ слева */
+}
+

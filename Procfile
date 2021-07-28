@@ -1,0 +1,1 @@
+web: gunicorn --chdir law_site law_site.wsgi:application --log-file -
