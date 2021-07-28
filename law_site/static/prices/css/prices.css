@@ -14,3 +14,22 @@
     padding-left: 10px; /* отступ слева */
 }
 
+
+table {
+   width: 500px;
+   border-collapse: collapse;
+   /*убираем пустые промежутки между ячейками*/
+   border: 1px solid grey;
+   /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+
+   border-spacing: 10px 20px
+
+}
+th {
+   width: 30%;
+   border: 2px solid grey;
+}
+td{
+   width: 30%;
+   border: 1px solid grey;
+}
