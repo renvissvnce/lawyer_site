@@ -1,35 +1,17 @@
-.left-col, /* левая колонка */
-.right-col/* правая колонка */
-{
-    width: 50%;    /* ширина */
-    min-width: 180px;  /* минимальная ширина сужения */
-    height: auto;  /* высота */
+* {
     box-sizing: border-box;
-    float: left; /* плавающие блоки */
-}
-.left-col{
-    padding-right: 10px; /* отступ справа */
-}
-.right-col{
-    padding-left: 10px; /* отступ слева */
 }
 
-
-table {
-   width: 500px;
-   border-collapse: collapse;
-   /*убираем пустые промежутки между ячейками*/
-   border: 1px solid grey;
-   /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
-
-   border-spacing: 10px 20px
-
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
-th {
-   width: 30%;
-   border: 2px solid grey;
-}
-td{
-   width: 30%;
-   border: 1px solid grey;
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
 }

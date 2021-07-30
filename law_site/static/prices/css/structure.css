@@ -9,7 +9,7 @@
 .hide + label {
     border-bottom: 1px dotted green;
     padding: 0;
-    color: green;
+    color: black;
     cursor: pointer;
     display: inline-block;
 }

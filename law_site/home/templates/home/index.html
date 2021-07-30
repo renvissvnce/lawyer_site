@@ -6,38 +6,48 @@
 {% load static %}
 
 {% block body %}
+<link rel="stylesheet" href=" {% static 'home/css/home.css' %} " type="text/css">
 
-<style>
-   .leftimg {
-    float:left; /* Выравнивание по левому краю */
-    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
-   }
-   .rightimg  {
-    float: right; /* Выравнивание по правому краю  */
-    margin: 7px 0 7px 100px; /* Отступы вокруг картинки */
-   }
-  </style>
 
-<div class="container" >
+<div class="container">
+    <hr><h1 asign="left" style="word-wrap: break-word; margin-top: 10px;">Адвокат Беккер Мария Ивановна</h1><hr>
 
-    <br>
-    <h3 class="text-right">Адвокат Беккер Мария Ивановна</h3><br>
-    <p align="justify"><img src="{% static 'home/img/img_law.png' %}" alt="First" width="640" height="400" class="rightimg">
-        Опыт работы в юриспруденции более 24 лет. 11 лет работы в суде. Адвокатская практика более 10 лет.</p>
-    <p align="justify"> Оказываю помощь при:
-    <li><h6>Составлении документов в суд</h6></li>
-    <li><h6>Подаче жалоб, претензий в различные государственные структуры и организации</h6></li>
-    <li><h6>Представляю интересы клиентов в судах первой и второй инстанциях по гражданским и уголовным делам, органах юстиции.</h6></li>
-    </p>
-    <p align="justify">Ответ на обращение в электронном виде (по электронной почте, в вайбер, в вацап, телеграмм, инстаграмм)
-    будет дан по возможности в максимально короткий срок. Индивидуальный подход к каждому клиенту.</p>
-    <p align="justify">При возникновении необходимости подготовки документов либо представительства на досудебном следствии
-        в срочном порядке звонить по указанному номеру. </p>
-    <p align="justify">Свидетельство о праве на занятие адвокатской деятельностью: № 2864, выдано Донецкой КДКА 26.03.2008 года. (ФОТО!) </p>
+<div class="row">
+<img src="{% static 'home/img/img_law.png' %}" alt="First" class="column" >
+<div class="column" align="justify">
+
+    <h5>Опыт работы в юриспруденции более 24 лет. 11 лет работы в суде. Адвокатская практика более 10 лет.</h5>
+    <h5>Оказываю помощь при:</h5>
+    <ul>
+    <li><h5>Составлении документов в суд</h5></li>
+    <li><h5>Подаче жалоб, претензий в различные государственные структуры и организации</h5></li>
+    <li><h5>Представляю интересы клиентов в судах первой и второй инстанциях по гражданским и уголовным делам, органах юстиции.</h5></li>
+    <h5>Ответ на обращение в электронном виде (по электронной почте, в вайбер, в вацап, телеграмм, инстаграмм)
+    будет дан по возможности в максимально короткий срок. Индивидуальный подход к каждому клиенту.</h5>
+    </ul>
+    <h5>При возникновении необходимости подготовки документов либо представительства на досудебном следствии
+        в срочном порядке звонить по указанному номеру. </h5>
+    <h5>Свидетельство о праве на занятие адвокатской деятельностью: № 2864, выдано Донецкой КДКА 26.03.2008 года. (ФОТО!) </h5>
+    </div>
+
+</div>
+
+
+<div class="row">
+
+
+<div align="justify" class="column">
+        <h5>Ручаюсь за свое дело, своим опытом, знаниями.</h5>
+    <ul>
+        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ea est magni nam quod! Accusamus error, ex, exercitationem explicabo hic illo in itaque, neque pariatur qui reiciendis repellat sit vitae!</h5>
+        <h5>Отзывы моих клиентов и результаты дел, которыми я занималась.</h5>
+        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ea est magni nam quod! Accusamus error, ex, exercitationem explicabo hic illo in itaque, neque pariatur qui reiciendis repellat sit vitae!</h5></li>
+    </ul>
+</div>
 
 
 <!-- Слайдер -->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="width: 500px; height:500px; margin: 0 auto">
+<div id="carouselExampleCaptions" class="carousel slide column" data-bs-ride="carousel" >
 
 <!-- Кнопки слайдера -->
 
@@ -122,6 +132,11 @@
   </button>
 </div>
 
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </div>
+</div>
 {% endblock %}

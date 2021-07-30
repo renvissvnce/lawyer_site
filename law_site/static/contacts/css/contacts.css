@@ -13,6 +13,12 @@
 .right-col{
     padding-left: 10px;  /* отступ слева */
 
-
+.block-1, block-2, block-3 {
+    /*display:block*/
+    display: inline-block;
+    width: 20%;
+    height: 80px;
+    background: red;
+}
 
 

@@ -1,82 +1,71 @@
 {% extends 'home/base.html' %}
 
-
 {% block title %}
 Услуги
 {% endblock %}
 {% load static %}
 {% block body %}
+
 <link rel="stylesheet" href=" {% static 'prices/css/prices.css' %} " type="text/css">
 <link rel="stylesheet" href=" {% static 'prices/css/structure.css' %} " type="text/css">
-<div class="container">
-<hr>
-<h1 class="text-center">Услуги предоставляемые адвокатом</h1>
-<hr>
+<link rel="stylesheet" href=" {% static 'prices/css/table.css' %} " type="text/css">
 
-    <div>
-  <div class="container" align="center">
-    <br>
+<div class="container">
+
+<hr><h1 class="text-center">Услуги предоставляемые адвокатом</h1><hr>
+
+
+<div align="center">
 <input type="checkbox" id="hd-1" class="hide"/>
-    <label for="hd-1" >Гражданские дела</label>
+    <label for="hd-1" ><i class="fas fa-users"> Гражданские дела</i></label>
     <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
 <input type="checkbox" id="hd-2" class="hide"/>
-    <label for="hd-2" >Страховые споры</label>
+    <label for="hd-2" ><i class="fas fa-house-damage"> Страховые споры</i></label>
     <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
 <input type="checkbox" id="hd-3" class="hide"/>
-    <label for="hd-3" >ЗПП</label>
+    <label for="hd-3" ><i class="fas fa-search-dollar"> Защита прав потребителей</i></label>
     <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
 <input type="checkbox" id="hd-4" class="hide"/>
-    <label for="hd-4" >Наследственные споры</label>
+    <label for="hd-4" ><i class="fas fa-hand-holding-usd"> Наследственные споры</i></label>
     <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
 <input type="checkbox" id="hd-5" class="hide"/>
-    <label for="hd-5" >Семейные споры</label>
+    <label for="hd-5" ><i class="fas fa-users"> Семейные споры</i></label>
     <div>
        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
 <input type="checkbox" id="hd-6" class="hide"/>
-    <label for="hd-6" >Земельные споры</label>
+    <label for="hd-6" ><i class="fas fa-mountain"> Земельные споры</i></label>
     <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
 <input type="checkbox" id="hd-7" class="hide"/>
-    <label for="hd-7" >Недвижимость и жилищные споры</label>
+    <label for="hd-7" ><i class="fas fa-home"> Недвижимость и жилищные споры</i></label>
     <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 </div>
 
+<hr><h1 class="text-center">Из чего складывается стоимость юридических услуг</h1><hr>
 
-<!--
-  <ul class="right-col"><h4 class="text-center">Юридическим лицам</h4>
-      <li class="text-center">Арбитражные споры</li>
-      <li class="text-center">Банкротство</li>
-      <li class="text-center">Защита репутации</li>
-      <li class="text-center">Корпоративные споры</li>
-      <li class="text-center">Сделки с недвижимостью</li>
-      <li class="text-center">Земельные споры</li>
-      <li class="text-center">Экономические преступления</li>
-  </ul>
--->
+<div class="row reading-box">
 
-    <hr>
-<div class="reading-box">
-    <h2 class="text-center">Из чего складывается стоимость юридических услуг</h2><hr>
-    <div class="reading-box-additional">
-        <p><b>При определении стоимости услуг, адвокат руководствуется следующими критериями:</b></p>
+<div class="reading-box-additional">
+
+<p><b>При определении стоимости услуг, адвокат руководствуется следующими критериями:</b></p>
 <ol align="justify">
 <li><span style="text-decoration: underline;">Срочность</span>. Оказание услуг возможно в сжатые сроки, которые обсуждаются индивидуально.</li>
 <li><span style="text-decoration: underline;">Сложность</span>. Сложность дела можно оценить лишь после полного ознакомления со всеми материалами дела. Бывает, доверитель полагает, что ему необходимо лишь расторгнуть брак (дело небольшой сложности), но в дальнейшем оказывается, что также, само-собой, необходимо разделить имущество супругов (дело средней категории), и лишить отца родительских прав (сложная категория дел).</li>
@@ -88,14 +77,11 @@
 </div>
 </div>
 
+<hr><h1 class="text-center">Гонорар адвоката</h1><hr>
 
 
-<hr>
-   <h1 class="text-center">Гонорар адвоката</h1>
-<hr>
 
 
-    <div class="table-1">
 <table class="container">
 
 <thead>
@@ -108,53 +94,51 @@
 
 <tbody>
 
-<tr class="text-center">
-<td>Консультации (устные/письменные)</td>
-<td>Консультации по правовым вопросам.</td>
-<td>400/600 грн<br>
+<tr>
+<td class="text-center">Консультации (устные/письменные)</td>
+<td align="justify">Консультации по правовым вопросам.</td>
+<td class="text-center">400/600 грн<br>
 </tr>
 
-<tr class="text-center">
-<td>Справка по законодательству</td>
-<td>Письма-претензии 1 шт, или запрос в, какую-либо инстанци, либо организацию 1 шт</td>
-<td>400 грн за 1 шт</td>
+<tr>
+<td class="text-center">Справка по законодательству</td>
+<td align="justify">Письма-претензии 1 шт, или запрос в, какую-либо инстанци, либо организацию 1 шт</td>
+<td class="text-center">400 грн за 1 шт</td>
 </tr>
 
-<tr class="text-center">
-<td>Документы правового характера</td>
-<td>Ответ на иск, встречное исковое заявление, подготовка необходимых запросив и писем</td>
-<td>2500-3000 грн</td>
+<tr>
+<td class="text-center">Документы правового характера</td>
+<td align="justify">Ответ на иск, встречное исковое заявление, подготовка необходимых запросив и писем</td>
+<td class="text-center">2500-3000 грн</td>
 </tr>
 
-
-<tr class="text-center">
-<td>Правовое заключение</td>
-<td>Анализ конкретной ситуации, оценка рисков, правовое обоснование, предоставление рекомендаций</td>
-<td>4 000 руб</td>
+<tr>
+<td class="text-center">Правовое заключение</td>
+<td align="justify">Анализ конкретной ситуации, оценка рисков, правовое обоснование, предоставление рекомендаций</td>
+<td class="text-center">4 000 руб</td>
 </tr>
 
-<tr class="text-center">
-<td>Договоры</td>
-<td>Грамотное составление договорной документации, анализ сделок.</td>
-<td>от 5 000 руб</td>
+<tr>
+<td class="text-center">Договоры</td>
+<td align="justify">Грамотное составление договорной документации, анализ сделок.</td>
+<td class="text-center">от 5 000 руб</td>
 </tr>
 
-<tr class="text-center">
-<td>Представительство в государственных органах</td>
-<td>Представление интересов в органах государственной власти, органа местного самоуправления, и других организациях</td>
-<td>от 5 000 руб</td>
+<tr>
+<td class="text-center">Представительство в государственных органах</td>
+<td align="justify">Представление интересов в органах государственной власти, органа местного самоуправления, и других организациях</td>
+<td class="text-center">от 5 000 руб</td>
 </tr>
 
-<tr class="text-center">
-<td>Представительство в суде</td>
-<td>Представление интересов в гражданском, административном, уголовном судопроизводстве.</td>
-<td>от 6 000 руб</td>
+<tr>
+<td class="text-center">Представительство в суде</td>
+<td align="justify">Представление интересов в гражданском, административном, уголовном судопроизводстве.</td>
+<td class="text-center">от 6 000 руб</td>
 </tr>
 
 </tbody>
 
 </table>
-</div>
 
    <hr>
     <h6 align="justify">Окончательная сумма гонорара адвоката определяется соглашением сторон и может учитывать объем и сложность работы, продолжительность времени, необходимого для ее выполнения, сроки, степень срочности выполнения работы. Размер вознаграждения адвоката зависит от сложности дела и составляет фиксированную денежную сумму.</h6>
