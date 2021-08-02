@@ -20,8 +20,8 @@ crossorigin="anonymous">
 
 <div class="topnav" id="myTopnav" >
 
-    <img src="{% static 'home/img/Logo.png' %}" alt="Second" width="75" height="75" align="left"> <br>
-
+  <!-- <img src="{% static 'home/img/Logo.png' %}" alt="Second" width="75" height="75" class="text-left"> <br> -->
+<div class="text-right">
   <a href={% url 'home' %} class="nav-link px-2 text-white"><i class="fas fa-home"> Главная страница</i>
   <a href={% url 'prices' %} class="nav-link px-2 text-white"><i class="fas fa-hryvnia"> Услуги</i></a>
   <a href={% url 'contacts' %} class="nav-link px-2 text-white"><i class="fas fa-phone-square"> Контакты</i></a>
@@ -31,6 +31,7 @@ crossorigin="anonymous">
     <i class="fa fa-bars"></i>
   </a>
 
+</div>
 </div>
 
 
