@@ -7,75 +7,100 @@
 {% block body %}
 {% load static %}
 
-<link rel="stylesheet" href=" {% static 'contacts/css/form.css' %} " type="text/css">
+<link rel="stylesheet" href=" {% static 'contacts/css/form2.css' %} " type="text/css">
 <link rel="stylesheet" href=" {% static 'contacts/css/adopt.css' %} " type="text/css">
 <link rel="stylesheet" href=" {% static 'contacts/css/img.css' %} " type="text/css">
 
 <div class="container">
 
-<div class="row" align="justify" style="word-wrap: break-word; margin-top:13px;" >
-    <hr><article><h1 class="text-center">Контактные данные и график работы</h1></article><hr>
-    <ul class="column">
-        <h4><i class="fas fa-phone">Конактный телефон адвоката: +38-068-786-46-56</i></h4>
-        <h4><i class="fas fa-envelope">Электронная почта: mega-bekker777@ukr.net</i></h4>
-        <h4><i class="fas fa-map-marked-alt">Юридический адрес: Донецкская область, город Мариуполь, бульвар Богдана Хмельницкого, дом 6</i></h4><br>
-    </ul>
+<div class="row" style="margin-top:13px;">
+    <hr><article><h1 align="center">Контактные данные и график работы</h1></article><hr>
 
-    <ul class="column">
-        <h4>Понедельник-пятница с 10:00-20:00.</h4>
-        <h4>Выходные (суббота-воскресенье) и праздничные дни по записи</h4>
-        <h4>Стоимость оказания услуг в выходные и праздничные дни повышенная.</h4>
-    </ul>
+    <div class="column">
+        <h4><i class="fas fa-phone"></i> Конактный телефон: +38-068-786-46-56</h4>
+        <h4><i class="fas fa-envelope"></i> Эл.почта: mega-bekker777@ukr.net</h4>
+        <h4><i class="fas fa-map-marked-alt"></i> Юридический адрес: город Мариуполь, бульвар Богдана Хмельницкого, дом 6</h4>
+    </div>
+
+    <div class="column">
+        <h4><i class="fas fa-calendar-alt"></i> Понедельник-пятница с 10:00-20:00</h4>
+        <h4><i class="fas fa-adjust"></i> Выходные суббота-воскресенье и праздничные дни по записи</h4>
+        <h4><i class="fas fa-tags"></i> Стоимость оказания услуг в выходные и праздничные дни повышенная</h4>
+    </div>
 </div>
 
 
 
 <div class="row" align="justify" style="margin-top: 10px">
-        <hr><h1  align="center">Как добраться до адвоката</h1><hr>
-        <ul class="column" align="justify">
-        <h4>Здесь должны быть номера автобусов, маршруток.</h4>
-        <h4>Как пройти к зданию, какой код от домофона (но, я, как понял, клиентам надо звонить по прибытию, лучше это здесь написать)</h4>
+        <hr><h1  align="center">Как добраться</h1><hr>
+        <ul class="column" align="justify" align-text="justify">
+        <h4>До указанного адреса ходит общественный транспорт:</h4>
+            <h4><span style="text-decoration: underline;">Остановка площаль Воинов-освободителей</span></h4>
+        <ul>
+        <li><h4>Троллейбус №13 ходит раз в 24 минуты</h4></li>
+        <li><h4>Троллейбус №2 ходит раз в 40 минут</h4></li>
+        <li><h4>Автобус №8А ходит раз в 37 минут</h4></li></ul>
 
-        <h4>Ниже наверное сделаем формочку, для отправки заявок на сервер, это не проблема, сделаем. Расскажу что да как работает</h4>
+
+            <h4><span style="text-decoration: underline;">Остановка проспект Строителей</span></h4>
+        <ul>
+        <li><h4>Троллейбус №1 ходит по графику 07:46, 10:01, 15:01, 17:16</h4></li>
         </ul>
 
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1358.2607812397332!2d37.52566480819222!3d47.08884514478842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m3!3m2!1d47.0891871!2d37.5262269!4m5!1s0x40e6e485f1ec87fd%3A0xee318655846b68be!2z0L_Quy4g0JLQvtC40L3QvtCyLdC-0YHQstC-0LHQvtC00LjRgtC10LvQtdC5LCDQnNCw0YDQuNGD0L_QvtC70YwsINCU0L7QvdC10YbQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCwLCA4NzUwMA!3m2!1d47.088684!2d37.527454!5e0!3m2!1sru!2sru!4v1627367429102!5m2!1sru!2sru"
+</ul>
+        </ul>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.5002623293917!2d37.52410711538013!3d47.08926277915377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e485c3837989%3A0xf719455539b129b8!2z0LHRg9C7LiDQkdC-0LPQtNCw0L3QsCDQpdC80LXQu9GM0L3QuNGG0LrQvtCz0L4sIDYsINCc0LDRgNC40YPQv9C-0LvRjCwg0JTQvtC90LXRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDg3NTAw!5e0!3m2!1sru!2sru!4v1627900161202!5m2!1sru!2sru"
         class="container column md-auto"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 
 
-<div id="w" class="row" align="center">
-    <h7 style="color: red;">Доработать стили формы отправки на почту (нормализовать размеры)</h7>
-    <h3>Отправить заявку</h3>
-<form id="contactform" name="contact" method="post" action="#" >
-
-
-<p class="note"><span class="req">*</span> Поля со звездочкой обязательны для заполнения</p>
-<div class="row">
-<label for="name">Ваше Имя<span class="req">*</span></label><br>
-<input style='width: 300px;' type="text" name="name" id="name" class="txt" tabindex="1" placeholder="Иванов Иван Иванович" required>
-</div>
-
-<div class="row">
-<label for="email">E-mail Адрес <span class="req">*</span></label>
-<input style='width: 300px;' type="email" name="email" id="email" class="txt" tabindex="2" placeholder="address@mail.ru" required>
-</div>
-
-<div class="row">
-<label for="subject">Тема <span class="req">*</span></label>
-<input style='width: 300px;' type="text" name="subject" id="subject" class="txt" tabindex="3" placeholder="Кратко опишите тему" required>
-</div>
-
-<div class="row">
-<label for="message">Сообщение <span class="req">*</span></label>
-<textarea name="message" id="message" class="txtarea" tabindex="4" required></textarea>
-</div>
-
-<div class="center">
-<input type="submit" id="submitbtn" name="submitbtn" tabindex="5" value="Отправить Сообщение">
-</div>
-</form>
+    <div class="container ">
+        <hr><h1 class="text-center">Отправить заявку</h1><hr>
+  <form action="#">
+    <div class="row">
+      <div class="col-25">
+        <label for="fio">Ваше ФИО</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fio" name="firstname" placeholder="Введите ваше ФИО">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Электронная почта</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="lastname" placeholder="Введите вашу электронную почту">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="phone">Контактный телефон</label>
+      </div>
+        <div class="col-75">
+            <input type="text" id="phone" name="lastname" placeholder="Введите ваш контактный телефон">
+        </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="theme">Тема обращения</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="theme" name="lastname" placeholder="Опишите вашу тему обращения тезисно">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Текст</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Напишите суть обращения подробнее" style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
 </div>
 </div>
 

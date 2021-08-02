@@ -7,7 +7,7 @@
 {% block body %}
 
 <link rel="stylesheet" href=" {% static 'prices/css/prices.css' %} " type="text/css">
-<link rel="stylesheet" href=" {% static 'prices/css/structure.css' %} " type="text/css">
+<link rel="stylesheet" href=" {% static 'prices/css/acc.css' %} " type="text/css">
 <link rel="stylesheet" href=" {% static 'prices/css/table.css' %} " type="text/css">
 
 <div class="container">
@@ -16,45 +16,48 @@
 
 
 <div align="center">
-<input type="checkbox" id="hd-1" class="hide"/>
-    <label for="hd-1" ><i class="fas fa-users"> Гражданские дела</i></label>
-    <div>
+
+
+    <button class="accordion text-center"><i class="fas fa-users"> Гражданские дела</i></button>
+    <div class="panel">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
+    </div>
+
+<br>
+    <button class="accordion text-center"><i class="fas fa-house-damage"> Страховые споры</i></button>
+    <div class="panel">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
-<input type="checkbox" id="hd-2" class="hide"/>
-    <label for="hd-2" ><i class="fas fa-house-damage"> Страховые споры</i></label>
-    <div>
+
+
+    <button class="accordion text-center"><i class="fas fa-search-dollar"> Защита прав потребителей</i></button>
+    <div class="panel">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
-<input type="checkbox" id="hd-3" class="hide"/>
-    <label for="hd-3" ><i class="fas fa-search-dollar"> Защита прав потребителей</i></label>
-    <div>
+
+    <button class="accordion text-center"><i class="fas fa-hand-holding-usd"> Наследственные споры</i></button>
+    <div class="panel">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
-<input type="checkbox" id="hd-4" class="hide"/>
-    <label for="hd-4" ><i class="fas fa-hand-holding-usd"> Наследственные споры</i></label>
-    <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
-    </div>
-<br>
-<input type="checkbox" id="hd-5" class="hide"/>
-    <label for="hd-5" ><i class="fas fa-users"> Семейные споры</i></label>
-    <div>
+
+    <button class="accordion text-center"><i class="fas fa-users"> Семейные споры</i></button>
+    <div class="panel">
        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
-<br>
-<input type="checkbox" id="hd-6" class="hide"/>
-    <label for="hd-6" ><i class="fas fa-mountain"> Земельные споры</i></label>
-    <div>
+
+    <br>
+
+    <button class="accordion text-center"><i class="fas fa-mountain"> Земельные споры</i></button>
+    <div class="panel">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 <br>
-<input type="checkbox" id="hd-7" class="hide"/>
-    <label for="hd-7" ><i class="fas fa-home"> Недвижимость и жилищные споры</i></label>
-    <div>
+
+    <button class="accordion text-center"><i class="fas fa-home"> Недвижимость и жилищные споры</i></button>
+    <div class="panel">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem totam veniam vero. At aut beatae ducimus eligendi eos et itaque laborum natus numquam quas, quos rerum soluta vel vero voluptate?
     </div>
 </div>
@@ -143,5 +146,22 @@
    <hr>
     <h6 align="justify">Окончательная сумма гонорара адвоката определяется соглашением сторон и может учитывать объем и сложность работы, продолжительность времени, необходимого для ее выполнения, сроки, степень срочности выполнения работы. Размер вознаграждения адвоката зависит от сложности дела и составляет фиксированную денежную сумму.</h6>
 
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
 </div>
 {% endblock %}
