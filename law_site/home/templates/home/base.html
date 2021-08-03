@@ -12,16 +12,17 @@
 rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
 crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'home/css/topnav.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/css/foot.css' %}" type="text/css">
 
     <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
 
-<div class="topnav" id="myTopnav" >
+<div class="topnav" id="myTopnav" style="width:100%">
 
-  <!-- <img src="{% static 'home/img/Logo.png' %}" alt="Second" width="75" height="75" class="text-left"> <br> -->
-<div class="text-right">
+  <img src="{% static 'home/img/law_logo.png' %}" alt="Second" width="50" height="50" style="float: left;" >
+<div style="float: right;">
   <a href={% url 'home' %} class="nav-link px-2 text-white"><i class="fas fa-home"> Главная страница</i>
   <a href={% url 'prices' %} class="nav-link px-2 text-white"><i class="fas fa-hryvnia"> Услуги</i></a>
   <a href={% url 'contacts' %} class="nav-link px-2 text-white"><i class="fas fa-phone-square"> Контакты</i></a>
@@ -53,7 +54,9 @@ function myFunction() {
 </body>
 
 <footer class="bg-dark text-center text-white">
-  {% block footer %} <!-- Footer -->
+  {% block footer %}
+
+  <!-- Footer -->
 
   <!-- Grid container -->
   <div class="container p-4">
@@ -66,78 +69,44 @@ function myFunction() {
       <a class="btn btn-outline-light btn-floating m-1" href="https://goo.gl/maps/hdemssyMcqzGgUw58" role="button"><i class="fab fa-google"></i></a>
 
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/advokatbekker" role="button">
-        <i class="fab fa-instagram"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/advokatbekker" role="button"><i class="fab fa-instagram"></i></a>
 
       <!-- VK -->
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-vk"></i></a>
-
-      <!-- OK -->
-
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-odnoklassniki"></i></a>
     </section>
+
     <!-- Section: Social media -->
 
-    <!-- Section: Text -->
-    <section class="mb-4">
-      <p>
-        „Цивилизация привела к тому, что уже не важно, кто прав, а кто не прав; важно, чей адвокат лучше.“ —  Вильгельм Швебель
-      </p>
-    </section>
-    <!-- Section: Text -->
-
     <!-- Section: Links -->
-    <section class="container">
+    <section>
       <!--Grid row-->
       <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-3 mb-md-0">
-          <h5 class="text-uppercase">Контактная информация</h5>
+      <!--Grid column-->
 
-          <ul class="list-unstyled mb-0">
+      <div class="column">
+
+          <ul class="list-unstyled" style="text-align: left">
+            <h6>Контактная информация</h6>
             <li>
-              <a class="text-white">Телефон:+38-068-786-46-56</a>
+              <a href="tel:+38-068-786-46-56" class="text-white"><i class="fas fa-phone-volume"> Позвонить</i></a>
             </li>
             <li>
-              <a class="text-white">Эл.почта: mega-bekker777@ukr.net</a>
+              <a href="mailto:mega-bekker777@ukr.net" class="text-white"><i class="fas fa-envelope-open"> Написать на почту</i></a>
             </li>
             <li>
-              <a class="text-white">бульвар Богдана Хмельницкого, дом 6</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-
-
-
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Доделать</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
+              <a href="https://goo.gl/maps/UjFbwuxeHbEdoPjP9" class="text-white"><i class="fas fa-map-marked-alt"> Найти на карте</i></a>
             </li>
           </ul>
-        </div>
-        <!--Grid column-->
+      </div>
 
-<!--Grid column-->
- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Навигация сайта</h5>
+      <!--Grid column-->
 
-          <ul class="list-unstyled mb-0">
+      <!--Grid column-->
+
+      <div class="column">
+
+          <ul class="list-unstyled mb-0" style="float: right;">
+            <h6 >Навигация сайта</h6>
             <li>
               <a href="/" class="text-white">Главная страница</a>
             </li>
@@ -151,35 +120,15 @@ function myFunction() {
               <a href="/reviews" class="text-white">Отзывы</a>
             </li>
           </ul>
-        </div>
-<!--Grid column-->
+      </div>
 
+<!-- -->
 
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Доделать</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
       </div>
       <!--Grid row-->
     </section>
     <!-- Section: Links -->
-  </div>
+
   <!-- Grid container -->
 
   <!-- Copyright -->
