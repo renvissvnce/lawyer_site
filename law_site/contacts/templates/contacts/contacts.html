@@ -1,7 +1,7 @@
 {% extends 'home/base.html' %}
 
 {% block title %}
-Услуги
+Контакты
 {% endblock %}
 
 {% block body %}
@@ -34,73 +34,46 @@
 <div class="row" align="justify" style="margin-top: 10px">
         <hr><h1  align="center">Как добраться</h1><hr>
         <ul class="column" align="justify" align-text="justify">
-        <h4>До указанного адреса ходит общественный транспорт:</h4>
-            <h4><span style="text-decoration: underline;">Остановка площаль Воинов-освободителей</span></h4>
+        <h5>До указанного адреса ходит общественный транспорт:</h5>
+            <h5><span style="text-decoration: underline;">Остановка площаль Воинов-освободителей</span></h5>
         <ul>
-        <li><h4>Троллейбус №13 ходит раз в 24 минуты</h4></li>
-        <li><h4>Троллейбус №2 ходит раз в 40 минут</h4></li>
-        <li><h4>Автобус №8А ходит раз в 37 минут</h4></li></ul>
-
-
-            <h4><span style="text-decoration: underline;">Остановка проспект Строителей</span></h4>
+        <li><h5>Троллейбус №13, №2. Автобус №8А</h5></li>
+        </ul>
+        <h5><span style="text-decoration: underline;">Остановка проспект Строителей</span></h5>
         <ul>
-        <li><h4>Троллейбус №1 ходит по графику 07:46, 10:01, 15:01, 17:16</h4></li>
+        <li><h5>Троллейбус №1, №7, №8. Маршрутка №114.<br>Автобус №28а </h5></li>
+        </ul>
+
+            <h5><span style="text-decoration: underline;">Остановка проспект Нахимова</span></h5>
+        <ul>
+        <li><h5>Троллейбус №2, №13. Автобус №8А</h5></li>
         </ul>
 
 </ul>
         </ul>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.5002623293917!2d37.52410711538013!3d47.08926277915377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e485c3837989%3A0xf719455539b129b8!2z0LHRg9C7LiDQkdC-0LPQtNCw0L3QsCDQpdC80LXQu9GM0L3QuNGG0LrQvtCz0L4sIDYsINCc0LDRgNC40YPQv9C-0LvRjCwg0JTQvtC90LXRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDg3NTAw!5e0!3m2!1sru!2sru!4v1627900161202!5m2!1sru!2sru"
-        class="container column md-auto"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.5002623293917!2d37.52410711538013!3d47.
+      08926277915377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e485c3837989%3A0xf719455539b129b8!2z0LHRg9
+      C7LiDQkdC-0LPQtNCw0L3QsCDQpdC80LXQu9GM0L3QuNGG0LrQvtCz0L4sIDYsINCc0LDRgNC40YPQv9C-0LvRjCwg0JTQvtC90LXRhtC60LDRjyDQ
+      vtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDg3NTAw!5e0!3m2!1sru!2sru!4v1627900161202!5m2!1sru!2sru"
+        class="column md-auto"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 
 
-    <div class="container ">
+    <div class="text-center">
         <hr><h1 class="text-center">Отправить заявку</h1><hr>
-  <form action="#">
-    <div class="row">
-      <div class="col-25">
-        <label for="fio">Ваше ФИО</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fio" name="firstname" placeholder="Введите ваше ФИО">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="email">Электронная почта</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="email" name="lastname" placeholder="Введите вашу электронную почту">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="phone">Контактный телефон</label>
-      </div>
-        <div class="col-75">
-            <input type="text" id="phone" name="lastname" placeholder="Введите ваш контактный телефон">
-        </div>
-    </div>
-      <div class="row">
-      <div class="col-25">
-        <label for="theme">Тема обращения</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="theme" name="lastname" placeholder="Опишите вашу тему обращения тезисно">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Текст</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Напишите суть обращения подробнее" style="height:200px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
+
+        <form method="POST"> {% csrf_token %}
+
+                {{ form.fio }}<br>
+                {{ form.phone }}<br>
+                {{ form.mail }}<br>
+                {{ form.topic }}<br>
+                {{ form.full_text }}<br>
+                {{ form.date }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Отправить</button>
+        </form>
+<br>
 </div>
 </div>
 

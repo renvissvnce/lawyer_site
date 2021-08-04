@@ -19,7 +19,7 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #4CAF50;
   color: black;
 }
 
@@ -35,7 +35,7 @@ body {
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
-    float: right;
+    float: left;
     display: block;
   }
 }

@@ -3,6 +3,7 @@
 
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="/static/home/img/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -15,6 +16,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'home/css/foot.css' %}" type="text/css">
 
     <title>{% block title %}{% endblock %}</title>
+
 </head>
 
 <body>
@@ -52,16 +54,16 @@ function myFunction() {
 <body>
 {% block body %}{% endblock %}
 </body>
-
+<div class="row">
 <footer class="bg-dark text-center text-white">
   {% block footer %}
 
   <!-- Footer -->
 
   <!-- Grid container -->
-  <div class="container p-4">
+  <div class="container" >
     <!-- Section: Social media -->
-    <section class="mb-4">
+    <section>
       <!-- Facebook -->
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
 
@@ -83,12 +85,12 @@ function myFunction() {
       <div class="row">
       <!--Grid column-->
 
-      <div class="column">
+      <div class="column-foot">
 
-          <ul class="list-unstyled" style="text-align: left">
+          <ul class="list-unstyled mb-0" style="float: left;">
             <h6>Контактная информация</h6>
             <li>
-              <a href="tel:+38-068-786-46-56" class="text-white"><i class="fas fa-phone-volume"> Позвонить</i></a>
+              <a href="tel:+38-068-786-46-56" class="text-white"><i class="fas fa-phone-volume">Позвонить</i></a>
             </li>
             <li>
               <a href="mailto:mega-bekker777@ukr.net" class="text-white"><i class="fas fa-envelope-open"> Написать на почту</i></a>
@@ -103,10 +105,10 @@ function myFunction() {
 
       <!--Grid column-->
 
-      <div class="column">
+      <div class="column-foot">
 
           <ul class="list-unstyled mb-0" style="float: right;">
-            <h6 >Навигация сайта</h6>
+            <h7 >Навигация сайта</h7>
             <li>
               <a href="/" class="text-white">Главная страница</a>
             </li>
@@ -140,5 +142,5 @@ function myFunction() {
 
 <!-- Footer -->{% endblock %}
 </footer>
-
+</div>
 </html>
