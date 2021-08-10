@@ -1,0 +1,9 @@
+.break-word {
+		word-wrap: break-word;
+}
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+
+    }
+

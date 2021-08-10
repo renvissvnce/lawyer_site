@@ -24,11 +24,12 @@ crossorigin="anonymous">
 <div class="topnav" id="myTopnav" style="width:100%">
 
   <img src="{% static 'home/img/law_logo.png' %}" alt="Second" width="50" height="50" style="float: left;" >
+
 <div style="float: right;">
   <a href={% url 'home' %} class="nav-link px-2 text-white"><i class="fas fa-home"> Главная страница</i>
   <a href={% url 'prices' %} class="nav-link px-2 text-white"><i class="fas fa-hryvnia"> Услуги</i></a>
   <a href={% url 'contacts' %} class="nav-link px-2 text-white"><i class="fas fa-phone-square"> Контакты</i></a>
-  <a href={% url 'reviews' %} class="nav-link px-2 text-white"><i class="fas fa-comment-dots">Отзывы (test)</i></a>
+<!--  <a href={% url 'reviews' %} class="nav-link px-2 text-white"><i class="fas fa-comment-dots">Отзывы (test)</i></a> -->
 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -60,7 +61,7 @@ function myFunction() {
 
   <!-- Footer -->
 
-  <!-- Grid container -->
+  <!-- Grid container --> <br>
   <div class="container" >
     <!-- Section: Social media -->
     <section>

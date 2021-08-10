@@ -19,13 +19,13 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #4CAF50;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .topnav .icon {
@@ -43,8 +43,9 @@ body {
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
-    position: absolute;
+    position: responsive;
     right: 0;
+
     top: 0;
   }
   .topnav.responsive a {
