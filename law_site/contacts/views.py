@@ -3,7 +3,7 @@ from .forms import FeedbackForm
 
 
 #def contacts(request):
-    #return render(request, 'contacts/contacts.html')
+    #return render(request, 'contacts/contacts2.html')
 
 
 def contacts(request):

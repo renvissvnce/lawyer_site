@@ -2,17 +2,20 @@ table {
     width: 100%;
    border-collapse: collapse;
    /*убираем пустые промежутки между ячейками*/
-   border: 2px solid grey;
+   border: 2px;
    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
    word-break: break-word;
 }
 
+tr {
+   width: 5%;
+   border: 2px;
+}
+td {
+   width: 5%;
+   border: 2px;
+}
 th {
    width: 5%;
-   border: 2px solid grey;
+   border: 2px;
 }
-td{
-   width: 5%;
-   border: 2px solid grey;
-}
-

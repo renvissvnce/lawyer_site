@@ -14,6 +14,7 @@ rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0
 crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'home/css/topnav.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'home/css/foot.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/css/tables_base.css' %}" type="text/css">
 
     <title>{% block title %}{% endblock %}</title>
 
@@ -22,14 +23,13 @@ crossorigin="anonymous">
 <body>
 
 <div class="topnav" id="myTopnav" style="width:100%">
-
+<div class="container">
   <img src="{% static 'home/img/law_logo.png' %}" alt="Second" width="50" height="50" style="float: left;" >
 
 <div style="float: right;">
   <a href={% url 'home' %} class="nav-link px-2 text-white"><i class="fas fa-home"> Главная страница</i>
   <a href={% url 'prices' %} class="nav-link px-2 text-white"><i class="fas fa-hryvnia"> Услуги</i></a>
   <a href={% url 'contacts' %} class="nav-link px-2 text-white"><i class="fas fa-phone-square"> Контакты</i></a>
-<!--  <a href={% url 'reviews' %} class="nav-link px-2 text-white"><i class="fas fa-comment-dots">Отзывы (test)</i></a> -->
 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -37,7 +37,7 @@ crossorigin="anonymous">
 
 </div>
 </div>
-
+</div>
 
 <script>
 function myFunction() {
@@ -80,57 +80,27 @@ function myFunction() {
 
     <!-- Section: Social media -->
 
-    <!-- Section: Links -->
-    <section>
-      <!--Grid row-->
-      <div class="row">
-      <!--Grid column-->
 
-      <div class="column-foot">
+<table class="table-1">
+    <tr class="tr-1">
+        <td class="td-1"><h6>Контактная информация</h6></td>
+        <td class="td-1"><h6>Навигация сайта</h6></td>
+    </tr>
+    <tr class="tr-1">
+        <td class="td-1"><a href="tel:+38-068-786-46-56" class="text-white"><i class="fas fa-phone-volume">Позвонить</i></a></td>
+        <td class="td-1"><a href="/" class="text-white">Главная страница</a></td>
+    </tr>
+    <tr class="tr-1">
+        <td class="td-1"><a href="mailto:mega-bekker777@ukr.net" class="text-white"><i class="fas fa-envelope-open"> Написать на почту</i></a></td>
+        <td class="td-1"><a href="/prices" class="text-white">Услуги</a></td>
+    </tr>
+    <tr class="tr-1">
+        <td class="td-1"><a href="https://goo.gl/maps/UjFbwuxeHbEdoPjP9" class="text-white"><i class="fas fa-map-marked-alt"> Найти на карте</i></a></td>
+        <td class="td-1"><a href="/contacts" class="text-white">Контакты</a></td>
+    </tr>
+</table>
 
-          <ul class="list-unstyled mb-0" style="float: left;">
-            <h6>Контактная информация</h6>
-            <li>
-              <a href="tel:+38-068-786-46-56" class="text-white"><i class="fas fa-phone-volume">Позвонить</i></a>
-            </li>
-            <li>
-              <a href="mailto:mega-bekker777@ukr.net" class="text-white"><i class="fas fa-envelope-open"> Написать на почту</i></a>
-            </li>
-            <li>
-              <a href="https://goo.gl/maps/UjFbwuxeHbEdoPjP9" class="text-white"><i class="fas fa-map-marked-alt"> Найти на карте</i></a>
-            </li>
-          </ul>
-      </div>
 
-      <!--Grid column-->
-
-      <!--Grid column-->
-
-      <div class="column-foot">
-
-          <ul class="list-unstyled mb-0" style="float: right;">
-            <h7 >Навигация сайта</h7>
-            <li>
-              <a href="/" class="text-white">Главная страница</a>
-            </li>
-            <li>
-              <a href="/prices" class="text-white">Услуги</a>
-            </li>
-            <li>
-              <a href="/contacts" class="text-white">Контакты</a>
-            </li>
-            <li>
-              <a href="/reviews" class="text-white">Отзывы</a>
-            </li>
-          </ul>
-      </div>
-
-<!-- -->
-
-      </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
 
   <!-- Grid container -->
 

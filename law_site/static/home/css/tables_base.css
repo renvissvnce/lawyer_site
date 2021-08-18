@@ -1,18 +1,21 @@
-table {
+.table-1 {
     width: 100%;
    border-collapse: collapse;
    /*убираем пустые промежутки между ячейками*/
-   border: 2px solid grey;
+   border: 2px;
    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
    word-break: break-word;
 }
 
-th {
+.tr-1 {
    width: 5%;
-   border: 2px solid grey;
+   border: 2px;
 }
-td{
+.td-1 {
    width: 5%;
-   border: 2px solid grey;
+   border: 2px;
 }
-
+.th-1 {
+   width: 5%;
+   border: 2px;
+}
