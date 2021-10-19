@@ -22,7 +22,7 @@ crossorigin="anonymous">
 
 <body>
 
-<div class="topnav" id="myTopnav" style="width:100%;">
+<div class="topnav" id="myTopnav" style="width:100%">
 <div class="container">
   <img src="{% static 'home/img/law_logo.png' %}" alt="Second" width="50" height="50" style="float: left;" >
 
@@ -55,7 +55,7 @@ function myFunction() {
 <body>
 {% block body %}{% endblock %}
 </body>
-<div class="row">
+<div>
 <footer class="bg-dark text-center text-white">
   {% block footer %}
 
@@ -66,16 +66,24 @@ function myFunction() {
     <!-- Section: Social media -->
     <section>
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-facebook-f"></i>
+      </a>
 
       <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="https://goo.gl/maps/hdemssyMcqzGgUw58" role="button"><i class="fab fa-google"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://goo.gl/maps/hdemssyMcqzGgUw58" role="button">
+          <i class="fab fa-google"></i>
+      </a>
 
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/advokatbekker" role="button"><i class="fab fa-instagram"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/advokatbekker" role="button">
+          <i class="fab fa-instagram"></i>
+      </a>
 
       <!-- VK -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-vk"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-vk"></i>
+      </a>
     </section>
 
     <!-- Section: Social media -->
@@ -87,15 +95,18 @@ function myFunction() {
         <td class="td-1"><h6>Навигация сайта</h6></td>
     </tr>
     <tr class="tr-1">
-        <td class="td-1"><a href="tel:+38-068-786-46-56" class="text-white"><i class="fas fa-phone-volume">Позвонить</i></a></td>
+        <td class="td-1"><a href="tel:+38-068-786-46-56" class="text-white">
+            <i class="fas fa-phone-volume">Позвонить</i></a></td>
         <td class="td-1"><a href="/" class="text-white">Главная страница</a></td>
     </tr>
     <tr class="tr-1">
-        <td class="td-1"><a href="mailto:mega-bekker777@ukr.net" class="text-white"><i class="fas fa-envelope-open"> Написать на почту</i></a></td>
+        <td class="td-1"><a href="mailto:mega-bekker777@ukr.net" class="text-white">
+            <i class="fas fa-envelope-open"> Написать на почту</i></a></td>
         <td class="td-1"><a href="/prices" class="text-white">Услуги</a></td>
     </tr>
     <tr class="tr-1">
-        <td class="td-1"><a href="https://goo.gl/maps/UjFbwuxeHbEdoPjP9" class="text-white"><i class="fas fa-map-marked-alt"> Найти на карте</i></a></td>
+        <td class="td-1"><a href="https://goo.gl/maps/UjFbwuxeHbEdoPjP9" class="text-white">
+            <i class="fas fa-map-marked-alt"> Найти на карте</i></a></td>
         <td class="td-1"><a href="/contacts" class="text-white">Контакты</a></td>
     </tr>
 </table>

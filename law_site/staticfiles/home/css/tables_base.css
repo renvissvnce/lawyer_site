@@ -1,4 +1,4 @@
-table {
+.table-1 {
     width: 100%;
    border-collapse: collapse;
    /*убираем пустые промежутки между ячейками*/
@@ -7,33 +7,15 @@ table {
    word-break: break-word;
 }
 
-tr {
+.tr-1 {
    width: 5%;
    border: 2px;
 }
-td {
+.td-1 {
    width: 5%;
    border: 2px;
 }
-th {
+.th-1 {
    width: 5%;
    border: 2px;
 }
-
-
-
-
-
-@media only screen and (max-width: 320px) {
-
-
-    .table, .table tr, .table td {
-        display: block;
-        width: 100%;
-        text-align: justify;
-        word-break: normal;
-        word-spacing: -2px;
-        white-space: normal;
-    }
-}
-

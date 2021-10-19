@@ -14,6 +14,7 @@ tr {
 td {
    width: 5%;
    border: 2px;
+
 }
 th {
    width: 5%;
@@ -25,15 +26,13 @@ th {
 
 
 @media only screen and (max-width: 320px) {
-
-
     .table, .table tr, .table td {
         display: block;
         width: 100%;
         text-align: justify;
-        word-break: normal;
+        word-break: break-all;
         word-spacing: -2px;
         white-space: normal;
+        border-spacing: 20px;
     }
 }
-

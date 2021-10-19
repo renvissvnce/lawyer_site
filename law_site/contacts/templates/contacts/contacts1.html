@@ -1,0 +1,173 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+Контакты
+{% endblock %}
+
+{% block body %}
+{% load static %}
+
+<link rel="stylesheet" href=" {% static 'contacts/css/form2.css' %} " type="text/css">
+<link rel="stylesheet" href=" {% static 'contacts/css/tables.css' %} " type="text/css">
+
+
+<div class="container">
+<!-- done copy and paste in release version-->
+
+<hr><article><h1 align="center">Контактные данные и график работы</h1></article><hr>
+
+<!--
+<div>
+<table>
+    <tr>
+        <td><h5><i class="fas fa-phone"></i> Конактный телефон: 12312312</h5></td>
+        <td><h5><i class="fas fa-calendar-alt"></i> Понедельник-пятница с 10:00-20:00</h5></td>
+    </tr>
+
+    <tr>
+        <td><h4><i class="fas fa-envelope"></i> Эл.почта: lolkekcheburek@gmail.com</h4></td>
+        <td><h4><i class="fas fa-adjust"></i> Выходные суббота-воскресенье и праздничные дни по записи</h4></td>
+    </tr>
+
+    <tr>
+        <td><h4><i class="fas fa-map-marked-alt"></i> Юридический адрес: Lolkekhcebupeli kek lol arbidol6</h4></td>
+        <td><h4><i class="fas fa-tags"></i> Стоимость оказания услуг в выходные и праздничные дни повышенная</h4></td>
+    </tr>
+    </table>
+</div>
+-->
+
+
+<table class="table">
+    <tr>
+
+        <td>
+            <h4><i class="fas fa-phone"></i> Конактный телефон: +38-068-786-46-56</h4>
+            <h4><i class="fas fa-envelope"></i> Эл.почта: mega-bekker777@ukr.net</h4>
+            <h4><i class="fas fa-map-marked-alt"></i> Юридический адрес: город Мариуполь, бульвар Богдана Хмельницкого, дом 6</h4>
+        </td>
+
+
+        <td>
+            <h4><i class="fas fa-calendar-alt"></i> Понедельник-пятница с 10:00-20:00</h4>
+            <h4><i class="fas fa-adjust"></i> Выходные суббота-воскресенье и праздничные дни по записи</h4>
+            <h4><i class="fas fa-tags"></i> Стоимость оказания услуг в выходные и праздничные дни повышенная</h4>
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+
+<!--
+    <div class ='row' align="justify">
+        <h4><i class="fas fa-phone"></i> Конактный телефон: +38-068-786-46-56</h4>
+        <h4><i class="fas fa-envelope"></i> Эл.почта: mega-bekker777@ukr.net</h4>
+        <h4><i class="fas fa-map-marked-alt"></i> Юридический адрес: город Мариуполь, бульвар Богдана Хмельницкого, дом 6</h4>
+    </div>
+
+    <div class ='row' align="justify">
+        <h4><i class="fas fa-calendar-alt"></i> Понедельник-пятница с 10:00-20:00</h4>
+        <h4><i class="fas fa-adjust"></i> Выходные суббота-воскресенье и праздничные дни по записи</h4>
+        <h4><i class="fas fa-tags"></i> Стоимость оказания услуг в выходные и праздничные дни повышенная</h4>
+    </div>
+<-->
+
+
+
+<hr><h1  align="center">Как добраться</h1><hr>
+
+    <table class="table">
+    <tr>
+
+        <td><h4>До указанного адреса ходит общественный транспорт:</h4>
+
+            <h4><span style="text-decoration: underline;">Остановка площаль Воинов-освободителей</span></h4>
+            <ul>
+                <li>
+                    <h4>Троллейбус №13, №2. Автобус №8А</h4>
+                </li>
+            </ul>
+
+            <h4><span style="text-decoration: underline;">Остановка проспект Строителей</span></h4>
+            <ul>
+                <li>
+                    <h4>Троллейбус №1, №7, №8. Маршрутка №114.<br>Автобус №28а </h4>
+                </li>
+            </ul>
+
+            <h4><span style="text-decoration: underline;">Остановка проспект Нахимова</span></h4>
+            <ul>
+                <li>
+                    <h4>Троллейбус №2, №13. Автобус №8А</h4>
+                </li>
+            </ul>
+
+        </td>
+
+        <td><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5432.994541159321!2d37.
+        52569518518067!3d47.08932143849024!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e485c3837989%3A0xf719455539b129b8!2z
+        0LHRg9C7LiDQkdC-0LPQtNCw0L3QsCDQpdC80LXQu9GM0L3QuNGG0LrQvtCz0L4sIDYsINCc0LDRgNC40YPQv9C-0LvRjCwg0JTQvtC90LXRhtC6
+        0LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDg3NTAw!5e0!3m2!1sru!2sru!4v1629293953075!5m2!1sru!2sru"
+                                class="container" width="500" height="500" allowfullscreen="1"
+                                loading="lazy"></iframe></td>
+
+
+    </tr>
+
+        <!--
+    <tr>
+        <td>
+            <h5><span style="text-decoration: underline;">Остановка площаль Воинов-освободителей</span></h5>
+            <ul>
+                <li>
+                    <h5>Троллейбус №13, №2. Автобус №8А</h5>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h5><span style="text-decoration: underline;">Остановка проспект Строителей</span></h5>
+            <ul>
+                <li>
+                    <h5>Троллейбус №1, №7, №8. Маршрутка №114.<br>Автобус №28а </h5>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h5><span style="text-decoration: underline;">Остановка проспект Нахимова</span></h5>
+            <ul>
+                <li>
+                    <h5>Троллейбус №2, №13. Автобус №8А</h5>
+                </li>
+            </ul>
+        </td>
+    </tr>
+-->
+</table>
+
+
+    <div class="text-center">
+        <hr><h1 class="text-center">Отправить заявку</h1><hr>
+
+        <form method="POST"> {% csrf_token %}
+
+                {{ form.fio }}<br>
+                {{ form.phone }}<br>
+                {{ form.mail }}<br>
+                {{ form.topic }}<br>
+                {{ form.full_text }}<br>
+
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Отправить</button>
+        </form>
+<br>
+</div>
+</div>
+
+{% endblock %}

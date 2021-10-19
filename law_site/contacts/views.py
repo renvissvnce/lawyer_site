@@ -2,6 +2,9 @@ from django.shortcuts import render,redirect
 from .forms import FeedbackForm
 
 
+#def contacts(request):
+    #return render(request, 'contacts/contacts.html')
+
 
 def contacts(request):
     error= ''
@@ -18,4 +21,4 @@ def contacts(request):
         'form': form,
         'error': error
     }
-    return render(request, 'contacts/contacts.html', data)
+    return render(request, 'contacts/contacts1.html', data)
