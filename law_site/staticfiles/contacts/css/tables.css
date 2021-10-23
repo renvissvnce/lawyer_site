@@ -1,24 +1,63 @@
-* {
-    box-sizing: border-box;
+table {
+    width: 100%;
+   border-collapse: collapse;
+   /*убираем пустые промежутки между ячейками*/
+   border: 2px;
+   /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+   word-break: break-word;
 }
 
-.column {
-    float: left;
-    width: 50%;
-    padding: 5px;
+tr {
+   width: 5%;
+   border: 2px;
+}
+td {
+   width: 5%;
+   border: 2px;
+}
+th {
+   width: 5%;
+   border: 2px;
 }
 
-/* Clearfix (clear floats) */
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-    .column {
+@media only screen and (max-width: 800px) {
+    .table, .table tr, .table td {
+        display: block;
         width: 100%;
+        text-align: justify;
+        word-break: break-all;
+        word-spacing: -2px;
+        white-space: normal;
+        border-spacing: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .table, .table tr, .table td {
+        display: block;
+        width: 100%;
+        text-align: justify;
+        word-break: break-all;
+        word-spacing: -2px;
+        white-space: normal;
+        border-spacing: 20px;
+    }
+}
+
+
+
+@media only screen and (max-width: 320px) {
+
+
+    .table, .table tr, .table td {
+        display: block;
+        width: 100%;
+        text-align: justify;
+        word-break: normal;
+        word-spacing: -2px;
+        white-space: normal;
     }
 }
 

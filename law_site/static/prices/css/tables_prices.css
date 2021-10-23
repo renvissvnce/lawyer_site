@@ -5,25 +5,29 @@ table {
    border: 2px;
    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
    word-break: break-word;
+   border: 1px solid black;
 }
 
 tr {
    width: 5%;
    border: 2px;
+   border: 1px solid black;
 }
 td {
    width: 5%;
    border: 2px;
+   border: 1px solid black;
 
 }
 th {
    width: 5%;
    border: 2px;
+   border: 1px solid black;
 }
 
 
 @media only screen and (max-width: 800px) {
-    .table, .table tr, .table td {
+    .table, .table tr, .table td, .table th {
         display: block;
         width: 100%;
         text-align: justify;
@@ -37,7 +41,7 @@ th {
 
 
 @media only screen and (max-width: 320px) {
-    .table, .table tr, .table td {
+    .table, .table tr, .table td, .table th{
         display: block;
         width: 100%;
         text-align: justify;

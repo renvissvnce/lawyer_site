@@ -15,7 +15,8 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'home/css/topnav.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'home/css/foot.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'home/css/tables_base.css' %}" type="text/css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>{% block title %}{% endblock %}</title>
 
 </head>
@@ -24,20 +25,26 @@ crossorigin="anonymous">
 
 <div class="topnav" id="myTopnav" style="width:100%">
 <div class="container">
-  <img src="{% static 'home/img/law_logo.png' %}" alt="Second" width="50" height="50" style="float: left;" >
 
-<div style="float: right;">
-  <a href={% url 'home' %} class="nav-link px-2 text-white"><i class="fas fa-home"> Главная страница</i>
-  <a href={% url 'prices' %} class="nav-link px-2 text-white"><i class="fas fa-hryvnia"> Услуги</i></a>
-  <a href={% url 'contacts' %} class="nav-link px-2 text-white"><i class="fas fa-phone-square"> Контакты</i></a>
+        <img src="{% static 'home/img/law_logo.png' %}" alt="Second" width="50" height="50" style="float: left;" >
 
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+        <div style="float: right;">
 
+            <a href={% url 'home' %} class="nav-link px-2 text-white"><i class="fas fa-home"> Главная страница</i>
+            <!--<a href={% url 'about' %} class="nav-link px-2 text-white"><i class="fas fa-info"> Обо мне</i></a>-->
+
+          <a href={% url 'prices' %} class="nav-link px-2 text-white"><i class="fas fa-hryvnia"> Услуги</i></a>
+          <a href={% url 'contacts' %} class="nav-link px-2 text-white"><i class="fas fa-phone-square"> Контакты</i></a>
+
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+
+        </div>
 </div>
-</div>
-</div>
+
+    
+
 
 <script>
 function myFunction() {
@@ -50,7 +57,28 @@ function myFunction() {
 }
 </script>
 
+<!--
+<table style="position: responsive;">
+        <tr>
+            <td>
+                <img src="{% static 'home/img/law_logo.png' %}" alt="Second" width="50" height="50" class="active">>
+            </td>
 
+            <td>
+                <div  style="float: right;">
+                    <a href={% url 'home' %} class="nav-link px-2 text-white"><i class="fas fa-home"> Главная страница</i>
+                    <a href={% url 'prices' %} class="nav-link px-2 text-white"><i class="fas fa-hryvnia"> Услуги</i>
+                    <a href={% url 'contacts' %} class="nav-link px-2 text-white"><i class="fas fa-phone-square"> Контакты</i></a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                        </a>
+                </div>
+            </td>
+        </tr>
+</table>
+-->
+
+</div>
 </body>
 <body>
 {% block body %}{% endblock %}
