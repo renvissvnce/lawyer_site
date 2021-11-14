@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+   border-collapse: collapse;
+   /*убираем пустые промежутки между ячейками*/
+   border: 2px solid grey;
+   /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+   word-break: break-word;
+}
+
+th {
+   width: 5%;
+   border: 2px solid grey;
+}
+td{
+   width: 5%;
+   border: 2px solid grey;
+}
+
