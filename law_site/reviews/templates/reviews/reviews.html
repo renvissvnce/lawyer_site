@@ -11,7 +11,7 @@
 <link rel="stylesheet" href=" {% static 'reviews/css/reviews_form.css' %} " type="text/css">
 <div class="container">
 <hr><h1 style="text-align: center;">Отзывы</h1><hr>
-    {% if not user.isnot_authenticated %}
+    {% if not user.is_authenticated %}
     <h5 style="text-align: center;"><b>Для отправки отзывов о проделанной работе вам следует
         <a href="/admin">Войти</a>/<a href="#">Зарегистрироваться</a></b></h5><br>{% endif %}
     <div>
