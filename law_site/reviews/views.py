@@ -7,11 +7,11 @@ def reviews(request):
     if request.method == "GET":
         p = Reviews.objects.all()
         form = ReviewsForm(request.POST)
-        return render(request, 'reviews/reviews.html', {'p': p, 'form': form})
+        return render(request, 'reviews', {'p': p, 'form': form})
 
     elif request.method == 'POST':
         form = ReviewsForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('reviews/reviews.html')
+            return redirect('reviews')
 
