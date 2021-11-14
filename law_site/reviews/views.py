@@ -7,7 +7,7 @@ def reviews(request):
     if request.method == "GET":
         p = Reviews.objects.all()
         form = ReviewsForm(request.POST)
-        return render(request, 'reviews', {'p': p, 'form': form})
+        return render(request, 'reviews.html', {'p': p, 'form': form})
 
     elif request.method == 'POST':
         form = ReviewsForm(request.POST)
