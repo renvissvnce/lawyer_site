@@ -13,5 +13,5 @@ def reviews(request):
         form = ReviewsForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('reviews')
+            return redirect('reviews/reviews.html')
 
