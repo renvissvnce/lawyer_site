@@ -17,7 +17,7 @@ class Reviews(models.Model):
     topic = models.CharField('Тема обращения', max_length=80)
     rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES, blank=True)
     full_text = models.TextField('Опишите вашу тему обращения', max_length=5000)
-    date = models.DateTimeField(default=timezone.now)
+    date = models.DateTimeField(default=timezone.now, blank=True)
 
     def __str__(self):
         return self.fio
