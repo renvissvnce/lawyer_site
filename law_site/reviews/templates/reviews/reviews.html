@@ -5,5 +5,82 @@
 {% endblock %}
 
 {% block body %}
-MurkPurkPurk
+
+{% load static %}
+
+<link rel="stylesheet" href=" {% static 'reviews/css/reviews_form.css' %} " type="text/css">
+<div class="container">
+<hr><h1 style="text-align: center;">Отзывы</h1><hr>
+    <h5 style="text-align: center;"><b>Для отправки отзывов о проделанной работе вам следует <a href="/admin">Войти</a>/<a href="#">Зарегистрироваться</a></b></h5><br>
+    <div>
+{% for el in p %}
+<form>
+        <table>
+    <tr>
+        <td colspan="2" class="text-center"><h5>Отзыв от {{ el.date }}</h5></td>
+    </tr>
+    <tr>
+        <td class="text-center">ФИО</td>
+        <td style="text-align: justify;">{{ el.fio }}</td>
+    </tr>
+    <tr>
+        <td class="text-center">Номер дела</td>
+        <td style="text-align: justify;">{{ el.case_number }}</td>
+    </tr>
+    <tr>
+        <td class="text-center">Оценка</td>
+        <td style="text-align: justify;">{{ el.rate }}</td>
+    </tr>
+    <tr>
+        <td class="text-center">Тема обращения</td>
+        <td style="text-align: justify;">{{ el.topic }}</td>
+    </tr>
+    <tr>
+        <td class="text-center" colspan="2">Отзыв</td>
+    </tr>
+    <tr>
+        <td style="text-align: justify;" colspan="2">{{ el.full_text }}</td>
+    </tr>
+</table><br>
+            {% endfor %}
+
+    </div>
+</form>
+
+
+{% if user.is_authenticated %}
+<hr><h1 style="text-align: center;">Оставить отзыв</h1><hr>
+<div>
+<form method="POST">
+    <table class="table" style="border">{% csrf_token %}
+        <tr>
+            <td>Ваше ФИО</td>
+            <td>{{ form.fio }}</td>
+        </tr>
+        <tr>
+            <td>Номер вашего телефона</td>
+            <td>{{ form.phone }}</td>
+        </tr>
+        <tr>
+            <td>Номер вашего дела</td>
+            <td>{{ form.case_number }}</td>
+        </tr>
+        <tr>
+            <td>Оценка качества оказанных услуг</td>
+            <td>{{ form.rate }}</td>
+        </tr>
+        <tr>
+            <td>Тема вашего обращения</td>
+            <td>{{ form.topic }}</td>
+        </tr>
+        <tr>
+            <td>Отзыв</td>
+            <td>{{ form.full_text }}</td>
+        </tr>
+    </table>
+    <button class="btn btn-success container" type="submit">Отправить</button>
+</form>{% endif %}
+    </div>
+    <br>
+</div>
 {% endblock %}

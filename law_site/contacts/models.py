@@ -7,7 +7,7 @@ class Feedback(models.Model):
     mail = models.CharField('Ваша электронная почта', max_length=30)
     topic = models.CharField('Тема обращения', max_length=80)
     full_text = models.TextField('Опишите вашу тему обращения', max_length=5000)
-    date = models.DateTimeField(default=datetime.now, blank=True)
+    date = models.DateTimeField(default=datetime.utcnow(), blank=True)
 
 
     def __str__(self):
