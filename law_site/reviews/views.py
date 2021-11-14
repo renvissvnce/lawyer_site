@@ -2,11 +2,12 @@ from django.shortcuts import render, redirect
 from .forms import ReviewsForm
 from .models import Reviews
 
+
 def reviews(request):
     if request.method == "GET":
         p = Reviews.objects.all()
         form = ReviewsForm(request.POST)
-        return render(request, 'reviews', {'p': p, 'form':form})
+        return render(request, 'reviews.html', {'p': p, 'form': form})
 
     elif request.method == 'POST':
         form = ReviewsForm(request.POST)
