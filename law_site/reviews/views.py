@@ -9,14 +9,14 @@ def reviews(request):
         p = Reviews.objects.all()
         acc = Acc.objects.all()
         form = ReviewsForm(request.POST)
-        return render(request, 'reviews/reviews.html', {'p': p, 'form': form, 'name' : request.user.username })
+        return render(request, 'reviews/reviews.html', {'p': p, 'form': form, 'name' : request.user.username, 'acc': acc})
 
     elif request.method == 'POST':
         form = ReviewsForm(request.POST)
         messages.success(request, 'Отзыв успешно добавлен!')
         if form.is_valid():
             form.save()
-            return redirect('reviews')
+            return redirect('reviews/reviews.html')
         else:
             messages.success(request, 'Отзыв не был добавлен. Попытайтесь еще раз.')
 
