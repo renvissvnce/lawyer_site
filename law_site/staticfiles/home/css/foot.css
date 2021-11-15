@@ -4,7 +4,11 @@
     padding: 10px;
     word-wrap: break-word;
     word-spacing:-2px;
+    grid-row-start: 2;
+  grid-row-end: 3;
 }
+
+
 
 /* Clear floats after the columns */
 .row:after  {

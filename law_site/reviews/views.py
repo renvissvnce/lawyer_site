@@ -7,16 +7,15 @@ from django.contrib.auth import authenticate, login, logout
 def reviews(request):
     if request.method == "GET":
         p = Reviews.objects.all()
-        acc = Acc.objects.all()
         form = ReviewsForm(request.POST)
-        return render(request, 'reviews/reviews.html', {'p': p, 'form': form, 'name' : request.user.username, 'acc': acc})
+        return render(request, 'reviews/reviews.html', {'p': p, 'form': form, 'name' : request.user.username})
 
     elif request.method == 'POST':
         form = ReviewsForm(request.POST)
         messages.success(request, 'Отзыв успешно добавлен!')
         if form.is_valid():
             form.save()
-            return redirect('reviews/reviews.html')
+            return redirect('reviews')
         else:
             messages.success(request, 'Отзыв не был добавлен. Попытайтесь еще раз.')
 
