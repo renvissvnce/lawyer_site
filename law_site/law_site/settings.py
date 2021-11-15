@@ -70,10 +70,22 @@ WSGI_APPLICATION = 'law_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd8kuhd0cju02l9',
+        'USER': 'ycenqqtvyhsbfn',
+        'PASSWORD': '321d53e347a8c14ccd438d71b981ad9162d5071be47ec6c0117761ed1685a634',
+        'HOST': 'ec2-44-199-158-170.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
@@ -129,14 +141,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'hs',
-#         'USER': 'postgres',
-#         'PASSWORD': '7894',
-#         'HOST': 'localhost',
-#         'PORT': '5432'
-#     }
-# }
