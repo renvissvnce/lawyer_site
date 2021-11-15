@@ -1,0 +1,39 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+
+{% block body %}
+
+<div class="container" style="text-align:center;">
+
+    <hr><h1>Войдите в учетную запись</h1><hr>
+
+    {% for msg in messages %}
+        <h5 style="text-align: center; colour: green;">{{ msg }}</h5>
+{% endfor %}
+
+            <form class="ui large form" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <br>
+                <table class="container">
+                    <tr>
+                        <td><h5>Ваша электронная почта</h5></td>
+                        <td><h5><input type="text" required name="username" placeholder="Введите вашу почту"
+                                       value="{{ data.username }}"/></h5></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Введите пароль от вашего аккаунта</h5></td>
+                        <td><h5><input type="password" required name="password" placeholder="Введите ваш пароль"/></h5></td>
+                    </tr>
+
+                </table><br>
+                <button class="ui fluid large teal submit button">Войти</button>
+                <br>
+<hr><div class="ui message"><a href="{% url 'reg'  %}"> У вас нет аккаунта? Зарегистрироваться.</a></div><hr>
+            <br>
+        </form>
+</div>
+
+
+  {% endblock %}
+</div>

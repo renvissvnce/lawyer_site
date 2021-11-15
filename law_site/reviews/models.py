@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import AbstractUser
+from django.conf import settings
 
 RATE_CHOICES = [
     (5, '5 - Превосходно!'),
@@ -17,10 +19,22 @@ class Reviews(models.Model):
     topic = models.CharField('Тема обращения', max_length=80)
     rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES, blank=True)
     full_text = models.TextField('Опишите вашу тему обращения', max_length=5000)
-    date = models.DateTimeField(default=timezone.now, blank=True)
+    date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.fio
 
     class Meta:
         verbose_name = 'Отзывы'
+
+
+class Acc(AbstractUser):
+    fio = models.CharField(max_length=40, unique=True)
+    phone = models.CharField(max_length=20)
+    created_at = models.DateTimeField(auto_now_add=True)
+    username = models.CharField(max_length=20, unique=True)
+
+    def __str__(self):
+        return f'Пользователь: {self.fio}'
+    class Meta:
+        verbose_name = 'Аккаунт'

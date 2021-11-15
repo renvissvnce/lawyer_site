@@ -4,7 +4,10 @@
     padding: 10px;
     word-wrap: break-word;
     word-spacing:-2px;
+    flex: 0 0 auto;
 }
+
+
 
 /* Clear floats after the columns */
 .row:after  {
