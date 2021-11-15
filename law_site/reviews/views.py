@@ -90,6 +90,6 @@ def logout_user(request):
     logout(request)
 
     messages.add_message(request, messages.SUCCESS,
-                         'Вы вышли со своей учетной записи.')
+                         'Вы вышли со своей учетной записи.     ')
 
     return redirect(reverse('login'))
