@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+Привет, {{ user.username }}!
+
+Подтвердите, пожалуйста свою учетную запись, для того, чтобы оставить отзыв!
+
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+
+Спасибо!
+
+{% endautoescape %}

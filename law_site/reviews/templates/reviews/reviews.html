@@ -16,14 +16,14 @@
     <h5 style="text-align: center;"><b>Для отправки отзывов о проделанной работе вам следует
         <a href="/login">Войти</a>/<a href="/register">Зарегистрироваться</a></b></h5><br>
 {% endif %}
-
 {% if user.is_authenticated %}
-<div style="text-align: center;">
-    <h5>Привет, {{request.user.fio}}!
-    <a href="{% url 'logout_user' %}"><button class = 'btn btn-success>'>Выйти</a></h5>
+<div style="text-align: right;">
+    <h5 style="float:right;">Привет {{request.user.username}}</h5>
+    <a href="{% url 'logout_user' %}"><button class = 'btn btn-success>'>Выйти</a>
 </div>
 {% endif %}
     <div>
+
 {% for msg in messages %}
         <h5 style="text-align: center; colour: green;">{{ msg }}</h5>
 {% endfor %}
@@ -66,19 +66,21 @@
 
 
 {% if user.is_authenticated %}
-
 <hr><h1 style="text-align: center;">Оставить отзыв</h1><hr>
 <div>
 <form method="POST">
     <table class="table" style="border">{% csrf_token %}
+
         <tr>
             <td>Ваше ФИО</td>
-            <td>{{ form.fio }}</td>
+            <td>{{request.user.fio}} {{form.fio}}</td>
         </tr>
+
         <tr>
             <td>Номер вашего телефона</td>
             <td>{{ form.phone }}</td>
         </tr>
+
         <tr>
             <td>Номер вашего дела</td>
             <td>{{ form.case_number }}</td>

@@ -10,7 +10,7 @@
 
     {% for msg in messages %}
         <h5 style="text-align: center; colour: green;">{{ msg }}</h5>
-{% endfor %}
+    {% endfor %}
 
             <form class="ui large form" method="post" action="{% url 'login' %}">
         {% csrf_token %}
@@ -23,8 +23,7 @@
                     </tr>
                     <tr>
                         <td><h5>Введите пароль от вашего аккаунта</h5></td>
-                        <td><h5><input type="password" required name="password"
-                                       placeholder="Введите ваш пароль"/></h5></td>
+                        <td><h5><input type="password" required name="password" placeholder="Введите ваш пароль"/></h5></td>
                     </tr>
 
                 </table><br>

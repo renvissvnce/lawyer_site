@@ -1,7 +1,22 @@
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import AbstractUser, User
+from django.contrib.auth.models import AbstractUser
 
+
+class Acc(AbstractUser):
+    fio = models.CharField(max_length=40)
+    phone = models.CharField(max_length=20)
+    created_at = models.DateTimeField(auto_now_add=True)
+    username = models.CharField(max_length=20, unique=True)
+    is_email_verified = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.fio
+
+    class Meta:
+        verbose_name = 'Аккаунт'
+
+####################################################################
 
 RATE_CHOICES = [
     (5, '5 - Превосходно!'),
@@ -13,8 +28,7 @@ RATE_CHOICES = [
 
 
 class Reviews(models.Model):
-    fio = models.CharField('Ваше ФИО', max_length=35)
-    phone = models.CharField('Ваш телефон', max_length=25)
+    fio = models.ForeignKey(Acc, on_delete=models.CASCADE)
     case_number = models.CharField('Номер вашего обращения', max_length=30)
     topic = models.CharField('Тема обращения', max_length=80)
     rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES, blank=True)
@@ -24,16 +38,6 @@ class Reviews(models.Model):
     def __str__(self):
         return self.fio
 
+
     class Meta:
         verbose_name = 'Отзывы'
-
-
-class Acc(AbstractUser):
-    fio = models.CharField(max_length=40, unique=True)
-    phone = models.CharField(max_length=20)
-    username = models.CharField(max_length=20, unique=True)
-
-    def __str__(self):
-        return f'Пользователь: {self.fio}'
-    class Meta:
-        verbose_name = 'Аккаунт'

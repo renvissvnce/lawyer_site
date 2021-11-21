@@ -78,22 +78,8 @@ DATABASES = {
 }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'd8kuhd0cju02l9',
-#         'USER': 'ycenqqtvyhsbfn',
-#         'PASSWORD': '321d53e347a8c14ccd438d71b981ad9162d5071be47ec6c0117761ed1685a634',
-#         'HOST': 'ec2-44-199-158-170.compute-1.amazonaws.com',
-#         'PORT': '5432'
-#     }
-# }
-
-AUTH_USER_MODEL = "reviews.Acc"
-
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -141,3 +127,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = "reviews.Acc"
+
+#email verification
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'tatestrus@gmail.com'
+EMAIL_HOST_PASSWORD = "asd123rf"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
