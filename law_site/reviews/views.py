@@ -12,6 +12,7 @@ from django.core.mail import EmailMessage
 from django.conf import settings
 import threading
 
+
 class EmailThread(threading.Thread):
 
     def __init__(self, email):
