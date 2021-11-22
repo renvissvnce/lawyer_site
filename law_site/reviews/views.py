@@ -1,8 +1,13 @@
-from django.shortcuts import render, redirect, reverse
+from django.contrib.auth.forms import PasswordResetForm,SetPasswordForm
+from django.contrib.auth.tokens import default_token_generator
+from django.db.models import Q
+from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.views.generic import FormView
+
 from .forms import ReviewsForm
 from .models import Reviews, Acc
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -27,7 +32,7 @@ def reviews(request):
     if request.method == "GET":
         p = Reviews.objects.all()
         form = ReviewsForm(request.POST)
-        return render(request, 'reviews/reviews.html', {'p': p, 'form': form, 'name' : request.user})
+        return render(request, 'reviews/reviews.html', {'p': p, 'form': form, 'name': request.user})
 
     elif request.method == 'POST':
         form = ReviewsForm(request.POST)
@@ -38,22 +43,40 @@ def reviews(request):
     else:
         messages.success(request, 'Отзыв не был добавлен. Попытайтесь еще раз.')
 
+
 def send_activation_email(user, request):
-        current_site = get_current_site(request)
-        email_subject = 'Подтвердите ваш аккаунт'
-        email_body = render_to_string('reviews/activate.html', {
-            'user': user,
-            'domain': current_site,
-            'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-            'token': generate_token.make_token(user)
-        })
+    current_site = get_current_site(request)
+    email_subject = 'Подтвердите ваш аккаунт'
+    email_body = render_to_string('reviews/activate.html', {
+        'user': user,
+        'domain': current_site,
+        'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+        'token': generate_token.make_token(user)
+    })
 
-        email = EmailMessage(subject=email_subject, body=email_body, from_email=settings.EMAIL_HOST_USER,
-                     to=[user.email]
-                     )
+    email = EmailMessage(subject=email_subject, body=email_body, from_email=settings.EMAIL_HOST_USER,
+                         to=[user.email]
+                         )
+    EmailThread(email).start()
 
-        email.send()
-        EmailThread(email).start()
+
+def send_reset_password(user, request):
+    current_site = get_current_site(request)
+    email_subject = 'Сброс пароля'
+    email_body = render_to_string('reviews/password_reset_email.html', {
+        'user': user,
+        'domain': current_site,
+        'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+        'token': generate_token.make_token(user)
+    })
+
+    email = EmailMessage(subject=email_subject, body=email_body, from_email=settings.EMAIL_HOST_USER,
+                         to=[user.email]
+                         )
+
+    email.send()
+    EmailThread(email).start()
+
 
 def register(request):
     if request.method == "POST":
@@ -65,9 +88,9 @@ def register(request):
         password = request.POST.get('password')
         password2 = request.POST.get('password2')
 
-        if len(password) < 6:
+        if len(password) < 8:
             messages.add_message(request, messages.ERROR,
-                                 'Пароль должен быть больше 6 символов')
+                                 'Пароль должен быть больше 8 символов')
             context['has_error'] = True
 
         if password != password2:
@@ -104,7 +127,6 @@ def register(request):
                              'Аккаунт создан, осталось только подтвердить!')
         return redirect('login')
 
-
     return render(request, 'reviews/register.html')
 
 
@@ -130,7 +152,6 @@ def login_user(request):
         return redirect('reviews')
 
     return render(request, 'reviews/login.html')
-
 
 
 def logout_user(request):
@@ -160,3 +181,39 @@ def activate_user(request, uidb64, token):
         return redirect(reverse('login'))
 
     return render(request, 'reviews/register.html')
+
+
+def password_reset_request(request):
+    if request.method == 'POST':
+        current_site = get_current_site(request)
+        password_form = PasswordResetForm(request.POST)
+        if password_form.is_valid():
+            data = password_form.cleaned_data['email']
+            user_email = Acc.objects.filter(Q(email=data))
+            if user_email.exists():
+                for user in user_email:
+                    email_subject = 'Сброс пароля на сайте advokat-bekker.com'
+                    email_template_name = render_to_string('reviews/password_reset_email.html',{
+                        'domain': current_site,
+                        'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                        'token': default_token_generator.make_token(user),
+                        'user': user,
+                        'protocol': 'http'
+                    })
+
+                    email = EmailMessage(subject=email_subject, body=email_template_name,
+                                         from_email=settings.EMAIL_HOST_USER, to=[user.email])
+                    try:
+                        EmailThread(email).start()
+                        messages.add_message(request, messages.SUCCESS, 'Письмо было отправлено')
+                    except:
+                        return HttpResponse('Invalid')
+
+                    return redirect('password_reset_done')
+    else:
+        password_form = PasswordResetForm()
+    context = {
+        'password_form': password_form,
+    }
+
+    return render(request, 'reviews/password_reset.html', context)

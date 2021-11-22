@@ -1,6 +1,6 @@
 from .models import Reviews, RATE_CHOICES, Acc
 from datetime import datetime
-from django.forms import ModelForm, TextInput, DateTimeField, Textarea, ChoiceField, Select, CharField
+from django.forms import ModelForm, TextInput, DateTimeField, Textarea, ChoiceField, Select, CharField, PasswordInput, ValidationError, Form
 
 
 class ReviewsForm(ModelForm):
@@ -24,31 +24,23 @@ class ReviewsForm(ModelForm):
     date = DateTimeField(initial=datetime.utcnow(), required=False)
 
 
+class SetPasswordForm(Form):
 
-    # widgets = {
-    #     'fio': TextInput(attrs={
-    #         'class': 'form-control',
-    #         'value': 'request.fio'
-    #     })}
-    #     'phone': TextInput(attrs={
-    #         'class': 'form-control',
-    #         'placeholder': 'Ваш телефон'
-    #     }),
-    #     'case_number': TextInput(attrs={
-    #         'class': 'form-control',
-    #         'placeholder': 'Ваша электронная почта'
-    #     }),
-    #     'topic': TextInput(attrs={
-    #         'class': 'form-control',
-    #         'placeholder': 'Тема вашего обращения'
-    #     }),
-    #     'full_text': Textarea(attrs={
-    #         'class': 'form-control',
-    #         'placeholder': 'Опишите вашу проблему'
-    #     }),
-    #     'date': DateTimeField(attrs={
-    #         'class': 'form-control',
-    #         'placeholder': 'Ваше ФИО'
-    #     })
-    #
-    # }
+    error_messages = {
+        'password_mismatch': ("The two password fields didn't match."),
+        }
+    new_password1 = CharField(label=("New password"),
+                                    widget=PasswordInput)
+    new_password2 = CharField(label=("New password confirmation"),
+                                    widget=PasswordInput)
+
+    def clean_new_password2(self):
+        password1 = self.cleaned_data.get('new_password1')
+        password2 = self.cleaned_data.get('new_password2')
+        if password1 and password2:
+            if password1 != password2:
+                raise ValidationError(
+                    self.error_messages['password_mismatch'],
+                    code='password_mismatch',
+                    )
+        return password2
