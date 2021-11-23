@@ -1,3 +1,5 @@
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.utils import timezone
 from .models import Reviews, RATE_CHOICES, Acc
 from datetime import datetime
 from django.forms import ModelForm, TextInput, DateTimeField, Textarea, ChoiceField, Select, CharField, PasswordInput, ValidationError, Form
@@ -44,3 +46,16 @@ class SetPasswordForm(Form):
                     code='password_mismatch',
                     )
         return password2
+
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+         model = Acc
+         fields = ('email', 'username')
+
+
+class CustomUserChangeForm(UserChangeForm):
+    class Meta:
+        model = Acc
+        fields = ('email', 'username')
+

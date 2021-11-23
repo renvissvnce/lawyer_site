@@ -18,7 +18,7 @@
 {% endif %}
 {% if user.is_authenticated %}
 <div style="text-align: right;">
-    <h5 style="float:right;">Привет {{request.user.username}}</h5>
+    <h5 style="float:right;">Привет {{request.user.fio}}</h5>
     <a href="{% url 'logout_user' %}"><button class = 'btn btn-success>'>Выйти</a>
 </div>
 {% endif %}

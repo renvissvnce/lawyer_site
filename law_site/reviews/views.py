@@ -83,6 +83,7 @@ def register(request):
         context = {'has_error': False, 'data': request.POST}
         phone = request.POST.get('phone')
         username = request.POST.get('username')
+        #username = request.POST.get('username')
         fio = request.POST.get('fio')
         email = request.POST.get('email')
         password = request.POST.get('password')
@@ -217,3 +218,6 @@ def password_reset_request(request):
     }
 
     return render(request, 'reviews/password_reset.html', context)
+
+
+
