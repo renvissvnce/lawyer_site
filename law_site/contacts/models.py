@@ -9,6 +9,7 @@ class Feedback(models.Model):
     full_text = models.TextField('Опишите вашу тему обращения', max_length=5000)
     date = models.DateTimeField(default=datetime.utcnow(), blank=True)
 
+
     def __str__(self):
         return self.topic
 

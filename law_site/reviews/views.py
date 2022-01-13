@@ -38,8 +38,14 @@ def reviews(request):
         form = ReviewsForm(request.POST)
         messages.success(request, 'Отзыв успешно добавлен!')
         if form.is_valid():
-            form.save()
+            form.save(request.user)
             return redirect('reviews')
+        # form.save(request.user.fio)
+        # if form.is_valid():
+        #     form.fio = Acc.objects.get(pk=request.user.id)
+        #     form.save()
+        #     return redirect('reviews')
+
     else:
         messages.success(request, 'Отзыв не был добавлен. Попытайтесь еще раз.')
 

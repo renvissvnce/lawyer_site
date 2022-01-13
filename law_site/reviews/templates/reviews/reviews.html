@@ -29,8 +29,6 @@
 {% endfor %}
 
 {% for el in p %}
-
-
 <form>
         <table>
     <tr>
@@ -62,6 +60,7 @@
             {% endfor %}
 
     </div>
+
 </form>
 
 
@@ -73,7 +72,7 @@
 
         <tr>
             <td>Ваше ФИО</td>
-            <td>{{request.user.fio}} {{form.fio}}</td>
+            <td>{{request.user.fio}}</td>
         </tr>
 
         <tr>

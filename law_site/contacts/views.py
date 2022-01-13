@@ -11,7 +11,6 @@ def contacts(request):
     if request.method == 'POST':
         form = FeedbackForm(request.POST)
         if form.is_valid():
-            form.save()
             return redirect('contacts')
         else:
             error = 'Форма была неверной'

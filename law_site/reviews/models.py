@@ -15,7 +15,7 @@ class Acc(AbstractUser):
     REQUIRED_FIELDS = ("username",)
 
     def __str__(self):
-        return self.username
+        return str(self.fio)
 
     class Meta:
         verbose_name = 'Аккаунт'
@@ -35,12 +35,12 @@ class Reviews(models.Model):
     fio = models.ForeignKey(Acc, on_delete=models.CASCADE)
     case_number = models.CharField('Номер вашего обращения', max_length=30)
     topic = models.CharField('Тема обращения', max_length=80)
-    rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES, blank=True)
+    rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES, blank=True, null=True)
     full_text = models.TextField('Опишите вашу тему обращения', max_length=5000)
     date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.fio
+        return str(self.fio)
 
 
     class Meta:

@@ -8,12 +8,8 @@ from django.forms import ModelForm, TextInput, DateTimeField, Textarea, ChoiceFi
 class ReviewsForm(ModelForm):
     class Meta:
         model = Reviews
-        fields = ('__all__')
+        fields = ('phone', 'case_number', 'topic', 'rate', 'full_text', 'date')
 
-
-    fio = Acc.fio
-    #CharField(required=True,
-    #                   widget=TextInput(attrs={'class': 'form-control', 'placeholder': 'Введите ваше ФИО'}))
     phone = CharField(required=True,
                       widget=TextInput(attrs={'class': 'form-control', 'placeholder': 'Введите ваш телефон'}))
     case_number = CharField(required=True,
@@ -24,6 +20,12 @@ class ReviewsForm(ModelForm):
     full_text = CharField(widget=Textarea(attrs={'class': 'form-control', 'placeholder': 'Введите текст'}),
                           required=False)
     date = DateTimeField(initial=datetime.utcnow(), required=False)
+
+    def save(self, user):
+        instance = super().save(commit=False)
+        instance.fio = user
+        instance.save()
+        return instance
 
 
 class SetPasswordForm(Form):
