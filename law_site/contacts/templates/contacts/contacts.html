@@ -7,70 +7,99 @@
 {% block body %}
 {% load static %}
 
-<link rel="stylesheet" href=" {% static 'contacts/css/form2.css' %} " type="text/css">
 
-<link rel="stylesheet" href=" {% static 'contacts/css/img.css' %} " type="text/css">
+<link rel="stylesheet" href=" {% static 'contacts/css/tables.css' %} " type="text/css">
+
 
 <div class="container">
 
-<div class="row" style="margin-top:13px;">
-    <hr><article><h1 align="center">Контактные данные и график работы</h1></article><hr>
 
-    <div class="column" style="text-justify: distribute">
-        <h4><i class="fas fa-phone"></i>Конактный телефон: +38-068-786-46-56</h4>
-        <h4><i class="fas fa-envelope"></i>Эл.почта: mega-bekker777@ukr.net</h4>
-        <h4><i class="fas fa-map-marked-alt"></i>Юридический адрес: город Мариуполь, бульвар Богдана Хмельницкого, дом 6</h4>
-    </div>
+<hr><article><h1 align="center">Контактные данные и график работы</h1></article><hr>
 
-    <div class="column" style="text-justify: distribute">
-        <h4><i class="fas fa-calendar-alt"></i>Понедельник-пятница с 10:00-20:00</h4>
-        <h4><i class="fas fa-adjust"></i>Выходные суббота-воскресенье и праздничные дни по записи</h4>
-        <h4><i class="fas fa-tags"></i>Стоимость оказания услуг в выходные и праздничные дни повышенная</h4>
-    </div>
-</div>
+<table class="table">
+    <tr>
+
+        <td>
+            <h4><i class="fas fa-phone"></i> Конактный телефон: +38-068-786-46-56</h4>
+            <h4><i class="fas fa-envelope"></i> Эл.почта: mega-bekker777@ukr.net</h4>
+            <h4><i class="fas fa-map-marked-alt"></i> Юридический адрес: город Мариуполь, бульвар Богдана Хмельницкого, дом 6</h4>
+        </td>
 
 
+        <td>
+            <h4><i class="fas fa-calendar-alt"></i> Понедельник-пятница с 10:00-20:00</h4>
+            <h4><i class="fas fa-adjust"></i> Выходные суббота-воскресенье и праздничные дни по записи</h4>
+        </td>
 
-<div class="row" align="justify" style="margin-top: 10px">
-        <hr><h1  align="center">Как добраться</h1><hr>
-        <ul class="column" align="justify" align-text="justify">
-        <h5>До указанного адреса ходит общественный транспорт:</h5>
-            <h5><span style="text-decoration: underline;">Остановка площаль Воинов-освободителей</span></h5>
-        <ul>
-        <li><h5>Троллейбус №13, №2. Автобус №8А</h5></li>
-        </ul>
-        <h5><span style="text-decoration: underline;">Остановка проспект Строителей</span></h5>
-        <ul>
-        <li><h5>Троллейбус №1, №7, №8. Маршрутка №114.<br>Автобус №28а </h5></li>
-        </ul>
+    </tr>
 
-            <h5><span style="text-decoration: underline;">Остановка проспект Нахимова</span></h5>
-        <ul>
-        <li><h5>Троллейбус №2, №13. Автобус №8А</h5></li>
-        </ul>
+</table>
 
-</ul>
-        </ul>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.5002623293917!2d37.52410711538013!3d47.
-      08926277915377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e485c3837989%3A0xf719455539b129b8!2z0LHRg9
-      C7LiDQkdC-0LPQtNCw0L3QsCDQpdC80LXQu9GM0L3QuNGG0LrQvtCz0L4sIDYsINCc0LDRgNC40YPQv9C-0LvRjCwg0JTQvtC90LXRhtC60LDRjyDQ
-      vtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDg3NTAw!5e0!3m2!1sru!2sru!4v1627900161202!5m2!1sru!2sru"
-        class="column md-auto"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
+
+<hr><h1  align="center">Как добраться</h1><hr>
+
+    <table class="table">
+    <tr>
+
+        <td><h4>Вы можете добраться на общественном транспорте:</h4>
+
+            <h4><span style="text-decoration: underline;">Остановка площаль Воинов-освободителей</span></h4>
+            <ul>
+                <li>
+                    <h4>Троллейбусы №2, №13</h4>
+                </li>
+                <li>
+                    <h4>Автобус №8А</h4>
+                </li>
+            </ul>
+
+            <h4><span style="text-decoration: underline;">Остановка ул.Бахчиванджи</span></h4>
+            <ul>
+                <li>
+                    <h4>Троллейбусы №7, №8.<br> </h4>
+                </li>
+                <li>
+                    <h4>Маршрутные такси №101, №111, №114А, №154, №154а, №211.</h4>
+                </li>
+                <li>
+                    <h4>Автобусы №18А, №18П, №28А</h4>
+                </li>
+            </ul>
+
+
+        </td>
+
+        <td>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.479646268021!2d37.52577381005659!3d47.
+        08966699782232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e5675af112c1%3A0xe22d92ff8976b57e!2z0LHRg
+        9C7LiDQkdC-0LPQtNCw0L3QsCDQpdC80LXQu9GM0L3QuNGG0LrQvtCz0L4sIDYsINCc0LDRgNC40YPQv9C-0LvRjCwg0JTQvtC90LXRhtC60LDRj
+        yDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDg3NTAw!5e0!3m2!1sru!2sru!4v1635441599042!5m2!1sru!2sru" width="500"
+        class="container" height="500" style="border:0;" loading="lazy" allowfullscreen="1"></iframe>
+
+        </td>
+
+
+    </tr>
+
+</table>
 
 
     <div class="text-center">
         <hr><h1 class="text-center">Отправить заявку</h1><hr>
 
-        <form method="POST"> {% csrf_token %}
+        <form method="POST">
+        {% csrf_token %}
+            {% for el in form %}
+            {{ el }}<br>
+            {% endfor %}
+<!--                {{ form.fio }}<br>-->
+<!--                {{ form.phone }}<br>-->
+<!--                {{ form.mail }}<br>-->
+<!--                {{ form.topic }}<br>-->
+<!--                {{ form.full_text }}<br>-->
 
-                {{ form.fio }}<br>
-                {{ form.phone }}<br>
-                {{ form.mail }}<br>
-                {{ form.topic }}<br>
-                {{ form.full_text }}<br>
+<!--            <span>{{ error }}</span>-->
 
-            <span>{{ error }}</span>
             <button class="btn btn-success" type="submit">Отправить</button>
         </form>
 <br>

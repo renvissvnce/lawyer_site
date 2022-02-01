@@ -1,18 +1,19 @@
 {% extends "home/base.html" %}
 {% block body %}
+{% load static %}
 
-          <div class="container">
+<link rel="stylesheet" href=" {% static 'reviews/css/reviews_table.css' %} " type="text/css">
+          <div>
               <hr><h1 style="text-align: center;">Регистрация</h1><hr>
 {% for msg in messages %}
         <h5 style="text-align: center; colour: green;">{{ msg }}</h5>
 {% endfor %}
               <br>
 
-        <form method="post" action="{% url 'reg' %}" >
+        <form method="post" action="{% url 'reg' %}" class="container">
           {% csrf_token %}
-
-
-            <table class="container" style="text-align: center;">
+<div class="container">
+            <table class="table" style="text-align:center;">
                 <tr>
                     <td><h5>Введите имя для вашего аккаунта</h5></td>
                     <td><h5><input type="text" name="username" value="{{data.username}}"  placeholder="Введите имя аккаунта"/></h5></td>
@@ -51,13 +52,15 @@
                 <tr>
                     <td colspan="2"><button class="ui fluid large teal submit button">Зарегистрироваться</button></td>
                 </tr>
-
-
-            </table>
-            <hr>
+</table>
+                <hr>
 <div class="ui message" style="text-align:center;"><h5>Вы уже зарегистрированы?
     <a href="{% url 'login'  %}">Войти.</h5></a></div><hr>
-        </form>
+</div>
+</form>
+
+
+
 
 
   </div>

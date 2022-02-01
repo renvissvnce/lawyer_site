@@ -1,9 +1,8 @@
-from django.contrib.auth.forms import PasswordResetForm,SetPasswordForm
+from django.contrib.auth.forms import PasswordResetForm, SetPasswordForm
 from django.contrib.auth.tokens import default_token_generator
 from django.db.models import Q
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.views.generic import FormView
-
 from .forms import ReviewsForm
 from .models import Reviews, Acc
 from django.contrib import messages
@@ -16,6 +15,7 @@ from .utils import generate_token
 from django.core.mail import EmailMessage
 from django.conf import settings
 import threading
+from django.core.paginator import Paginator
 
 
 class EmailThread(threading.Thread):
@@ -31,8 +31,11 @@ class EmailThread(threading.Thread):
 def reviews(request):
     if request.method == "GET":
         p = Reviews.objects.all()
+        pagination = Paginator(Reviews.objects.all(), 1)
+        pages = request.GET.get('page')
+        venues = pagination.get_page(pages)
         form = ReviewsForm(request.POST)
-        return render(request, 'reviews/reviews.html', {'p': p, 'form': form, 'name': request.user})
+        return render(request, 'reviews/reviews.html', {'p': p, 'venues': venues, 'form': form, 'name': request.user})
 
     elif request.method == 'POST':
         form = ReviewsForm(request.POST)
@@ -89,7 +92,6 @@ def register(request):
         context = {'has_error': False, 'data': request.POST}
         phone = request.POST.get('phone')
         username = request.POST.get('username')
-        #username = request.POST.get('username')
         fio = request.POST.get('fio')
         email = request.POST.get('email')
         password = request.POST.get('password')

@@ -28,7 +28,7 @@
         <h5 style="text-align: center; colour: green;">{{ msg }}</h5>
 {% endfor %}
 
-{% for el in p %}
+{% for el in venues %}
 <form>
         <table>
     <tr>
@@ -58,7 +58,19 @@
     </tr>
 </table><br>
             {% endfor %}
+<div class="container" style="text-align: center;">
+{% if venues.has_previous %}
+<a href="?page=1">&laquoПервая страница</a>
+<a href="?page= {{venues.previous_page_number}}">Предыдущая</a>
+{% endif %}
 
+Страница {{ venues.number }} из {{ venues.paginator.num_pages }}
+
+{% if venues.has_next %}
+<a href="?page={{venues.next_page_number}}">Следующая</a>
+<a href="?page={{ venues.paginator.num_pages }}">Последняя страница&raquo</a>
+{% endif %}
+</div>
     </div>
 
 </form>
@@ -101,5 +113,6 @@
 </form>{% endif %}
     </div>
     <br>
+
 </div>
 {% endblock %}

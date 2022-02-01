@@ -1,4 +1,3 @@
-
 .table-1 {
     width: 100%;
    border-collapse: collapse;
@@ -19,4 +18,16 @@
 .th-1 {
    width: 5%;
    border: 2px;
+}
+
+html, body{
+  height: 100%;
+}
+.container{
+  min-height: 100%;
+  margin: 0 auto 30px;
+}
+.footer{
+  position: sticky;
+  height: 100%;
 }
