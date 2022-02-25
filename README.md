@@ -1,1 +1,1 @@
-DEPLOY
+Django Python
